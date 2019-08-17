@@ -1,0 +1,5 @@
+@import url("grid-mediaQs.css");
+
+article > * {
+    border: 1px red solid;
+}
