@@ -26,15 +26,6 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
-app.get("/", (_, res) => {
-  connection.query("SELECT * FROM files", function (err, data) {
-    if (err) {
-      return res.status(500).send("it's broken guys");
-    }
-    res.render("index", {products: data});
-  });
-});
-
 app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
   });
