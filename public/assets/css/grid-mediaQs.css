@@ -12,6 +12,7 @@ body {
     width: 90%;
     height: 100%;
 }
+
 /* ! --- ! --- GRID --- ! --- ! */
 article {
     display: grid;
@@ -42,3 +43,20 @@ footer {
     grid-row: 3;
 }
 /* ! --- ! --- GRID --- ! --- ! */
+
+
+/* ! --- ! --- MEDIA QUERIES --- ! --- ! */
+@media only screen and  (max-width: 800px) {
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center; 
+    }
+
+    article > * {
+        width: 100%;
+        height: 100%;
+    }
+}
+/* ! --- ! --- MEDIA QUERIES --- ! --- ! */
