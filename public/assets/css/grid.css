@@ -1,17 +1,24 @@
 
-body {
+html {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center; 
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
 }
 
 /* ! --- ! --- GRID --- ! --- ! */
 article {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 200px 400px 200px ;
+    grid-template-columns: 10% 40% 40%;
+    grid-template-rows: 10% 80% 10%;
     width: 100%;
     height: 100%;
 }
