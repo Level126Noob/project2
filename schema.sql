@@ -14,6 +14,9 @@ CREATE TABLE files(
 id INTEGER(10) AUTO_INCREMENT NOT NULL,
 file_type varchar(100) NOT NULL,
 file_name varchar(100) NULL,
-upload_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 PRIMARY KEY (id)
 );
+
+INSERT INTO files (id, file_type, file_name)
+VALUES (1, "png", "sample_data");
