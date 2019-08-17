@@ -8,11 +8,6 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-var exphbs = require("express-handlebars");
-
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
-
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
@@ -20,7 +15,7 @@ var connection = mysql.createConnection({
   port: 3306,
   user: "root",
   password: "password",
-  database: ""
+  database: "scrapbook"
 });
 
 connection.connect(function(err) {
