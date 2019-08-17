@@ -1,3 +1,16 @@
+const mongoose = require ('mongoose');
+const CONNECTION_URI = process.env.MONGODB_URI || 'mongodb://localhost/users';
+mongoose.Promise = global.Promise;
+mongoose.set('debug', true);
+mongoose.
+connect(CONNECTION_URI)
+.then(() => {
+    console.log('Connected to MongoDB.');
+})
+.catch(err => console.log(err));
+
+//====================================================================================================================================================
+
 const express = require("express");
 
 const app = express();
