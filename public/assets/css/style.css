@@ -2,13 +2,13 @@
 * {box-sizing: border-box;}
 
 body {
-    background-color: rgb(241, 255, 253);
+    background-color: rgb(216, 221, 247);
     font-family: 'Josefin Sans', sans-serif;
 }
 
 header {
     border-radius: 20px;
-    background-color: rgb(216, 221, 247);
+    background-color: rgb(101, 115, 185);
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
     width: 100%;
     padding: 15px;
@@ -26,9 +26,7 @@ nav {
     height: auto;
     padding: 15px;
     border-radius: 20px;
-    background-color: rgb(216, 221, 247);
-    -webkit-box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+    background-color: #1D8E60;
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
 
@@ -42,11 +40,20 @@ input {
     float: right;
     width: 50%;
     border-radius: 10px;
+    float: right;
 }
 
 input[type=text]  {
     padding: 5px;
     font-size: 18px;
+}
+
+.dropdown {
+    height: min-content;
+    width: min-content;  
+    margin-left: 10px;
+    float: right;
+    border-radius: 20px;
 }
 /* == NAV == */
 
@@ -55,7 +62,7 @@ input[type=text]  {
 aside {
     padding: 20px;
     border-radius: 20px;
-    background-color: rgb(216, 221, 247);
+    background-color: rgb(101, 115, 185);
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
 
@@ -73,12 +80,42 @@ aside {
 main {
     padding: 15px;
     border-radius: 20px;
-    background-color: rgb(216, 221, 247);
+    background-color: rgb(101, 115, 185);
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
-    overflow: hidden;
+    
     transition: margin-left .5s;
 }
 
+#innerGrid{
+    padding: 15px; 
+    overflow-y: scroll;
+    border-radius: 20px;
+    background-color: rgb(101, 115, 185);
+    height: 95%;
+    width: 100%;
+    scrollbar-width: none;
+}
+
+#innerGrid::-webkit-scrollbar {
+    display: block;
+}
+
+.testDiv {
+    width: max-content;  
+    margin: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgb(216, 221, 247);
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+}
+
+#innerGrid > img {
+    height: 150px;
+    width: 200px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+}
 
 
 
@@ -89,7 +126,7 @@ main {
 footer {
     padding: 15px;
     border-radius: 20px;
-    background-color: rgb(216, 221, 247);
+    background-color: rgb(101, 115, 185);
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
 
