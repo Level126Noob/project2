@@ -1,6 +1,104 @@
 @import url("grid-mediaQs.css");
+* {box-sizing: border-box;}
 
-article > * {
-    border: 1px red solid;
+body {
+    background-color: rgb(241, 255, 253);
+    font-family: 'Josefin Sans', sans-serif;
 }
+
+header {
+    border-radius: 20px;
+    background-color: rgb(216, 221, 247);
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+    width: 100%;
+    padding: 15px;
+}
+
+header > h1{
+    width: auto; 
+    font-size: 2em;  
+}
+
+/* == NAV == */
+
+nav {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgb(216, 221, 247);
+    -webkit-box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+}
+
+nav > h1 {
+    width: auto;
+    float: left;
+    font-size: 2em;
+}
+
+input {
+    float: right;
+    width: 50%;
+    border-radius: 10px;
+}
+
+input[type=text]  {
+    padding: 5px;
+    font-size: 18px;
+}
+/* == NAV == */
+
+
+/* == ASIDE == */
+aside {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(216, 221, 247);
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+}
+
+#butn {
+    border-radius: 50%;
+    background-color: chartreuse;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+/* == ASIDE == */
+
+
+/* == MAIN == */
+main {
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgb(216, 221, 247);
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+    overflow: hidden;
+    transition: margin-left .5s;
+}
+
+
+
+
+/* == MAIN == */
+
+
+/* == FOOTER == */
+footer {
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgb(216, 221, 247);
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+}
+
+footer > p {
+    float: right;
+    font-size: 1.2em;
+}
+/* == FOOTER == */
+
+
+
 
