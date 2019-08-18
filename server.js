@@ -1,7 +1,7 @@
 const express = require("express");
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -27,13 +27,22 @@ connection.connect(function(err) {
 });
 
 app.get("/", (_, res) => {
-  connection.query("SELECT * FROM files", function (err, data) {
     if (err) {
       return res.status(500).send("it's broken guys");
     }
-    res.render("index", {products: data});
-  });
+    res.sendFile(path.join(__dirname, "index.html"));
 });
+
+app.get("/api/files", (_, res) => {
+  connection.query("SELECT * FROM files", function(err, data) {
+    if(err) {
+      return res.status(500).send("It's broken guys");
+    }
+    console.log(result);
+  res.json(result)
+  })
+})
+
 
 app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
