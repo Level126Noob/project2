@@ -1,0 +1,1 @@
+// function to grab the text in the search bar
