@@ -1,3 +1,4 @@
+//defining the PG database connection
 const {Client} = require('pg')
 const client = new Client ({
   user: "vyrenyyniltmhq",
@@ -8,9 +9,14 @@ const client = new Client ({
   ssl: true
 })
 
+
+//connecting to the PG database and querying the files and users tables
 client.connect()
 .then(() => console.log("Connected succesfully"))
+.then(() => client.query("INSERT INTO files values($1, $2, $3)", [5, 'travis', 'sampledata']))
 .then(() => client.query("SELECT * FROM files"))
+.then(results => console.table(results.rows))
+.then(() => client.query("SELECT * FROM users"))
 .then(results => console.table(results.rows))
 .catch(e => console.log(e))
 .finally(() => client.end())
