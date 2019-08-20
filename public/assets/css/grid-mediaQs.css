@@ -5,8 +5,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center; 
-  
+    justify-items: center;
 }
 
 body {
@@ -25,7 +24,8 @@ article {
     grid-template-columns: 20% 80%;
     grid-template-rows: 10% 80% 10%;
     width: 90%;
-    height: 100%;
+    height: 90%;
+    margin: 10px;
 }
 
 header {
@@ -53,6 +53,18 @@ footer {
     grid-row: 3;
 }
 /* ! --- ! --- GRID --- ! --- ! */
+
+
+/* ! --- ! --- INNER FLEXBOX --- ! --- ! */
+#innerGrid {
+    display: flex;
+    flex-flow: row wrap;
+    width: 150px;
+    overflow: auto;
+    align-content: flex-start; 
+}
+
+/* ! --- ! --- INNER FLEXBOX --- ! --- ! */
 
 
 /* ! --- ! --- MEDIA QUERIES --- ! --- ! */

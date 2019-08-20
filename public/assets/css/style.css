@@ -2,13 +2,19 @@
 * {box-sizing: border-box;}
 
 body {
-    background-color: rgb(216, 221, 247);
+    /* background-color: #ede9d0; */
+    background-image: linear-gradient(to right top, #ff7c60, #fa9667, #f4ad76, #eec28c, #ebd4a7, #ebd4a7, #ebd4a7, #ebd4a7, #eec28c, #f4ad76, #fa9667, #ff7c60);
+    background-attachment: fixed;
     font-family: 'Josefin Sans', sans-serif;
+    color: #312b2b;
 }
 
 header {
+    border-top: 2px #312b2b80 solid;
+    border-left: 2px #312b2b80 solid;
     border-radius: 20px;
-    background-color: rgb(101, 115, 185);
+    border-rad
+    background-color:#c34b36e8;
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
     width: 100%;
     padding: 15px;
@@ -16,7 +22,7 @@ header {
 
 header > h1{
     width: auto; 
-    font-size: 2em;  
+    font-size: 2em; 
 }
 
 /* == NAV == */
@@ -26,8 +32,9 @@ nav {
     height: auto;
     padding: 15px;
     border-radius: 20px;
-    background-color: #1D8E60;
+    background-color:#c34b36e8;
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+    
 }
 
 nav > h1 {
@@ -46,6 +53,7 @@ input {
 input[type=text]  {
     padding: 5px;
     font-size: 18px;
+    color: rgb(102, 116, 110);
 }
 
 .dropdown {
@@ -62,7 +70,9 @@ input[type=text]  {
 aside {
     padding: 20px;
     border-radius: 20px;
-    background-color: rgb(101, 115, 185);
+    border-top: 2px #312b2b80 solid;
+    border-left: 2px #312b2b80 solid;
+    background-color: #ff7d60d0;
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
 
@@ -80,7 +90,9 @@ aside {
 main {
     padding: 15px;
     border-radius: 20px;
-    background-color: rgb(101, 115, 185);
+    border-top: 2px #312b2b80 solid;
+    border-left: 2px #312b2b80 solid;
+    background-color: #00c7f40a;
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
     
     transition: margin-left .5s;
@@ -90,7 +102,6 @@ main {
     padding: 15px; 
     overflow-y: scroll;
     border-radius: 20px;
-    background-color: rgb(101, 115, 185);
     height: 95%;
     width: 100%;
     scrollbar-width: none;
@@ -102,16 +113,18 @@ main {
 
 .testDiv {
     width: max-content;  
+    height: min-content;
     margin: 20px;
     padding: 15px;
     border-radius: 20px;
-    background-color: rgb(216, 221, 247);
+    background-color: #00c7f48f;
+
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
 
 #innerGrid > img {
-    height: 150px;
-    width: 200px;
+    height: 30%;
+    width: auto;
     margin: 20px;
     border-radius: 20px;
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
@@ -126,7 +139,7 @@ main {
 footer {
     padding: 15px;
     border-radius: 20px;
-    background-color: rgb(101, 115, 185);
+    background-color: #ff7d60d0;
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
 
