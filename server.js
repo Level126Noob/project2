@@ -8,8 +8,15 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-var mysql = require("mysql");
+const exphbs = require("express-handlebars");
 
+app.engine("handlebars", exphbs({
+  defaultLayout: "main"
+}))
+
+app.set("view engine", "handlebars");
+
+var mysql = require("mysql");
 var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
@@ -27,21 +34,27 @@ connection.connect(function(err) {
 });
 
 app.get("/", (_, res) => {
+  connection.query("SELECT * FROM files", function (err, data) {
     if (err) {
-      return res.status(500).send("it's broken guys");
+      return res.status(500).send("it's broken dude");
     }
-    res.sendFile(path.join(__dirname, "index.html"));
+
+    res.render("index", {
+      files: data
+    });
+  });
 });
 
-app.get("/api/files", (_, res) => {
-  connection.query("SELECT * FROM files", function(err, data) {
-    if(err) {
-      return res.status(500).send("It's broken guys");
+app.delete("/api/files/:id", (req, res) => {
+  connection.query("DELETE FROM files WHERE id = ?", [req.params.id], function (err, result) {
+    if (err) {
+      return res.status(500).send("it's broken brohiem");
+    } else if (!result.affectedRows) {
+      return res.status(404).send("404 dude");
     }
-    console.log(result);
-  res.json(result)
-  })
-})
+    res.status(200).end();
+  });
+});
 
 
 app.listen(PORT, function() {
