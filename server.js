@@ -19,9 +19,6 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
 var mysql = require('mysql')
-=======
-
-var mysql = require("mysql");
 
 
 var connection = mysql.createConnection({
@@ -53,10 +50,10 @@ app.get("/", (_, res) => {
 
 app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
-  });
+ 
 
   console.log('connected as id ' + connection.threadId)
-})
+});
 
 
 app.listen(PORT, function () {
