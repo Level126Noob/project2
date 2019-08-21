@@ -132,11 +132,6 @@ aside {
 	overflow: hidden;
 }
 
-#files {
-    position: relative;
-    float: right;
-}
-
 .switch-field label {
 	color: #312b2b;
 	font-size: 14px;
@@ -158,3 +153,89 @@ aside {
     border-top-left-radius: 5px;
     margin-right: 5px;
 }
+
+
+
+
+
+/* ------------------------ */
+
+.submitBtn {
+    color: #312b2b;
+    background-color: #e9dac0; 
+    border: none;
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.submitBtn:hover {
+    cursor: pointer;
+}
+/* == ASIDE == */
+
+
+/* == MAIN == */
+main {
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #00c7f40a;
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+    
+    transition: margin-left .5s;
+}
+
+#innerGrid{
+    padding: 15px; 
+    overflow-y: scroll;
+    border-radius: 20px;
+    height: 95%;
+    width: 100%;
+    scrollbar-width: none;
+}
+
+#innerGrid::-webkit-scrollbar {
+    display: block;
+}
+
+.testDiv {
+    width: max-content;  
+    height: min-content;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    background-color: #00c7f48f;
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+}
+
+#innerGrid > img {
+    height: 30%;
+    width: auto;
+    margin: 20px;
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+}
+
+
+
+/* == MAIN == */
+
+
+/* == FOOTER == */
+footer {
+    padding: 15px;
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    background-color: #ff7d60d0;
+    text-align: center;
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+}
+
+footer > p {
+    
+    font-size: 1.2em;
+}
+/* == FOOTER == */
