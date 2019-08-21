@@ -2,9 +2,7 @@ const express = require('express')
 
 
 const app = express()
-const PORT = 8080
-const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 
 
 app.use(express.urlencoded({ extended: true }))
@@ -50,17 +48,5 @@ app.get("/", (_, res) => {
 
 app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
- 
-
-  console.log('connected as id ' + connection.threadId)
 });
-
-
-app.listen(PORT, function () {
-  console.log('Server listening on: http://localhost:' + PORT)
-})
-
-app.listen(PORT, function() {
-    console.log("Server listening on: http://localhost:" + PORT);
-  });
 
