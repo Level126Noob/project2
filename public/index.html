@@ -8,29 +8,40 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     
-    <title>Yo shit</title>
+    <title>ART Cloud</title>
 </head>
 <body>
     <article class="wrap">
     <header>
-        <h1>My Desk</h1>
+        <h1>ART Cloud</h1>
     </header>
         <nav>
-            <h1>Nav Bar</h1>
-            <div class="dropdown">
-                <select id="selectDay" class="dropdown-select">
-                    <option>Filetype</option>
-                </select>
-            </div>  
-            <input id="searchInput" type="text" placeholder="Find which shit u want...">
+            <h1></h1>
+              
+            <input id="searchInput" type="text" placeholder="Find...">
         </nav>
         <aside>
-            <!-- <span onclick="openNav()" id="butn"><div ></div></span>
-            <section id="sideBar">
-                <button onclick="closeNav()" class="hideBtn">Close &times;
-                </button>
-                <h2>Aside Bar</h2> -->
-            </section>
+            <h1>Options</h1>
+            
+            <div class="switch-field">
+                <input type="radio" id="radio-three" name="switch-two" value="yes" checked/>
+                <label for="radio-three">Newest</label>
+                
+                <input type="radio" id="radio-five" name="switch-two" value="no" />
+                <label for="radio-five">Oldest</label>
+            </div>
+
+            <div class="dropSelect">
+                <select class="select-css">
+                    <option>File Type</option>
+                    <option>.txt</option>
+                    <option>.png</option>
+                    <option>.pdf</option>
+                    <option>.fun</option>
+                </select>
+            </div>
+
+            <input class="submitBtn" type="button" value="Apply" />
         </aside>
         <main>
             <h3>Main</h3>

@@ -10,10 +10,8 @@ body {
 }
 
 header {
-    border-top: 2px #312b2b80 solid;
-    border-left: 2px #312b2b80 solid;
     border-radius: 20px;
-    border-rad
+    border-top-left-radius: 5px;
     background-color:#c34b36e8;
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
     width: 100%;
@@ -26,13 +24,13 @@ header > h1{
 }
 
 /* == NAV == */
-
 nav {
     width: 100%;
     height: auto;
-    padding: 15px;
+    padding: 10px;
     border-radius: 20px;
-    background-color:#c34b36e8;
+    border-top-left-radius: 5px;
+    background-color:#c34b3688;
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
     
 }
@@ -43,26 +41,21 @@ nav > h1 {
     font-size: 2em;
 }
 
-input {
-    float: right;
-    width: 50%;
-    border-radius: 10px;
-    float: right;
+#searchInput {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    border-top-left-radius: 5px;
+    height: 100%;
 }
 
-input[type=text]  {
-    padding: 5px;
-    font-size: 18px;
+#searchInput[type=text]  {
+    padding: 15px;
+    font-size: 20px;
     color: rgb(102, 116, 110);
+    background-color: #e9dac0;
 }
 
-.dropdown {
-    height: min-content;
-    width: min-content;  
-    margin-left: 10px;
-    float: right;
-    border-radius: 20px;
-}
 /* == NAV == */
 
 
@@ -70,18 +63,115 @@ input[type=text]  {
 aside {
     padding: 20px;
     border-radius: 20px;
-    border-top: 2px #312b2b80 solid;
-    border-left: 2px #312b2b80 solid;
+    border-top-left-radius: 5px;
     background-color: #ff7d60d0;
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
 
-#butn {
-    border-radius: 50%;
-    background-color: chartreuse;
-    width: 20px;
-    height: 20px;
-    margin: 10px;
+
+
+
+
+
+/* ------------------------ */
+.dropSelect {
+    margin-top: 20px;
+}
+
+.select-css {
+    display: block;
+    font-size: 15px;
+    color: #312b2b;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #e9dac0;
+  }
+  .select-css::-ms-expand {
+    display: none;
+    background-color: rgb(209, 23, 23);
+  }
+  /* .select-css:hover {
+    background-color: rgb(209, 23, 23);
+  } */
+  .select-css:focus {
+    outline: none;
+    
+  }
+  .select-css option {
+  background: #bdb19c;
+      padding: 4px 0;
+  }
+
+  .select-css option:hover {
+    background-color: rgb(209, 23, 23);
+    }
+
+
+
+
+
+/* ------------------------ */
+.switch-field {
+    display: flex;
+    margin-top: 20px;
+}
+
+.switch-field input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0); /* */
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.switch-field label {
+	color: #312b2b;
+	font-size: 14px;
+	padding: 15px;
+	transition: all .2s ease-in-out;
+}
+
+.switch-field label:hover {
+	cursor: pointer;
+}
+
+.switch-field input:checked + label {
+	background-color: #e9dac0;
+	color: #312b2b;
+}
+
+.switch-field label {
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    margin-right: 5px;
+}
+
+
+
+
+
+/* ------------------------ */
+
+.submitBtn {
+    color: #312b2b;
+    background-color: #e9dac0; 
+    border: none;
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.submitBtn:hover {
+    cursor: pointer;
 }
 /* == ASIDE == */
 
@@ -90,8 +180,6 @@ aside {
 main {
     padding: 15px;
     border-radius: 20px;
-    border-top: 2px #312b2b80 solid;
-    border-left: 2px #312b2b80 solid;
     background-color: #00c7f40a;
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
     
@@ -117,8 +205,8 @@ main {
     margin: 20px;
     padding: 15px;
     border-radius: 20px;
+    border-top-left-radius: 5px;
     background-color: #00c7f48f;
-
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
 
@@ -127,6 +215,7 @@ main {
     width: auto;
     margin: 20px;
     border-radius: 20px;
+    border-top-left-radius: 5px;
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
 
@@ -139,12 +228,14 @@ main {
 footer {
     padding: 15px;
     border-radius: 20px;
+    border-top-left-radius: 5px;
     background-color: #ff7d60d0;
+    text-align: center;
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
 
 footer > p {
-    float: right;
+    
     font-size: 1.2em;
 }
 /* == FOOTER == */
