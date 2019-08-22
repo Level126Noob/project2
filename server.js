@@ -2,8 +2,9 @@ const express = require("express");
 
 const app = express();
 const PORT = process.env.PORT || 8000;
-
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+  extended: true
+}));
 app.use(express.json());
 
 app.use(express.static("public"));
@@ -25,7 +26,7 @@ var connection = mysql.createConnection({
   database: "scrapbook"
 });
 
-connection.connect(function(err) {
+connection.connect(function (err) {
   if (err) {
     console.error("error connecting: " + err.stack);
     return;
@@ -45,6 +46,18 @@ app.get("/", (_, res) => {
   });
 });
 
+//searchbar code==================================================================================-.-.-.-//
+app.get("/api/files/:file_name", (req, res) => {
+  connection.query("SELECT file_name FROM files WHERE file_name = ?", [req.params.file_name], function (err, result) {
+    if (err) {
+      return res.status(500).send("it's broken brohiem");
+    }
+    res.render("index", {file_name: result})
+    console.log(result)
+  })
+})
+//======================================================================================================-.-.-.-.**!!@
+
 app.delete("/api/files/:id", (req, res) => {
   connection.query("DELETE FROM files WHERE id = ?", [req.params.id], function (err, result) {
     if (err) {
@@ -57,7 +70,6 @@ app.delete("/api/files/:id", (req, res) => {
 });
 
 
-app.listen(PORT, function() {
-    console.log("Server listening on: http://localhost:" + PORT);
-  });
-  
+app.listen(PORT, function () {
+  console.log("Server listening on: http://localhost:" + PORT);
+});

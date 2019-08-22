@@ -1,5 +1,8 @@
 @import url("grid-mediaQs.css");
-* {box-sizing: border-box;}
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     /* background-color: #ede9d0; */
@@ -12,15 +15,15 @@ body {
 header {
     border-radius: 20px;
     border-top-left-radius: 5px;
-    background-color:#c34b36e8;
-    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+    background-color: #c34b36e8;
+    box-shadow: 5px 8px 10px -5px rgba(0, 0, 0, 0.75);
     width: 100%;
     padding: 15px;
 }
 
-header > h1{
-    width: auto; 
-    font-size: 2em; 
+header>h1 {
+    width: auto;
+    font-size: 2em;
 }
 
 /* == NAV == */
@@ -30,12 +33,12 @@ nav {
     padding: 10px;
     border-radius: 20px;
     border-top-left-radius: 5px;
-    background-color:#c34b3688;
-    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
-    
+    background-color: #c34b3688;
+    box-shadow: 5px 8px 10px -5px rgba(0, 0, 0, 0.75);
+
 }
 
-nav > h1 {
+nav>h1 {
     width: auto;
     float: left;
     font-size: 2em;
@@ -49,7 +52,7 @@ nav > h1 {
     height: 100%;
 }
 
-#searchInput[type=text]  {
+#searchInput[type=text] {
     padding: 15px;
     font-size: 20px;
     color: rgb(102, 116, 110);
@@ -65,7 +68,7 @@ aside {
     border-radius: 20px;
     border-top-left-radius: 5px;
     background-color: #ff7d60d0;
-    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+    box-shadow: 5px 8px 10px -5px rgba(0, 0, 0, 0.75);
 }
 
 
@@ -92,26 +95,29 @@ aside {
     -webkit-appearance: none;
     appearance: none;
     background-color: #e9dac0;
-  }
-  .select-css::-ms-expand {
+}
+
+.select-css::-ms-expand {
     display: none;
     background-color: rgb(209, 23, 23);
-  }
-  /* .select-css:hover {
+}
+
+/* .select-css:hover {
     background-color: rgb(209, 23, 23);
   } */
-  .select-css:focus {
+.select-css:focus {
     outline: none;
-    
-  }
-  .select-css option {
-  background: #bdb19c;
-      padding: 4px 0;
-  }
 
-  .select-css option:hover {
+}
+
+.select-css option {
+    background: #bdb19c;
+    padding: 4px 0;
+}
+
+.select-css option:hover {
     background-color: rgb(209, 23, 23);
-    }
+}
 
 
 
@@ -124,28 +130,29 @@ aside {
 }
 
 .switch-field input {
-	position: absolute !important;
-	clip: rect(0, 0, 0, 0); /* */
-	height: 1px;
-	width: 1px;
-	border: 0;
-	overflow: hidden;
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    /* */
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
 }
 
 .switch-field label {
-	color: #312b2b;
-	font-size: 14px;
-	padding: 15px;
-	transition: all .2s ease-in-out;
+    color: #312b2b;
+    font-size: 14px;
+    padding: 15px;
+    transition: all .2s ease-in-out;
 }
 
 .switch-field label:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
-.switch-field input:checked + label {
-	background-color: #e9dac0;
-	color: #312b2b;
+.switch-field input:checked+label {
+    background-color: #e9dac0;
+    color: #312b2b;
 }
 
 .switch-field label {
@@ -162,7 +169,7 @@ aside {
 
 .submitBtn {
     color: #312b2b;
-    background-color: #e9dac0; 
+    background-color: #e9dac0;
     border: none;
     border-radius: 20px;
     border-top-left-radius: 5px;
@@ -173,6 +180,7 @@ aside {
 .submitBtn:hover {
     cursor: pointer;
 }
+
 /* == ASIDE == */
 
 
@@ -181,13 +189,13 @@ main {
     padding: 15px;
     border-radius: 20px;
     background-color: #00c7f40a;
-    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
-    
+    box-shadow: 5px 8px 10px -5px rgba(0, 0, 0, 0.75);
+
     transition: margin-left .5s;
 }
 
-#innerGrid{
-    padding: 15px; 
+#innerGrid {
+    padding: 15px;
     overflow-y: scroll;
     border-radius: 20px;
     height: 95%;
@@ -200,23 +208,23 @@ main {
 }
 
 .testDiv {
-    width: max-content;  
+    width: max-content;
     height: min-content;
     margin: 20px;
     padding: 15px;
     border-radius: 20px;
     border-top-left-radius: 5px;
     background-color: #00c7f48f;
-    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+    box-shadow: 5px 8px 10px -5px rgba(0, 0, 0, 0.75);
 }
 
-#innerGrid > img {
+#innerGrid>img {
     height: 30%;
     width: auto;
     margin: 20px;
     border-radius: 20px;
     border-top-left-radius: 5px;
-    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+    box-shadow: 5px 8px 10px -5px rgba(0, 0, 0, 0.75);
 }
 
 
@@ -231,11 +239,12 @@ footer {
     border-top-left-radius: 5px;
     background-color: #ff7d60d0;
     text-align: center;
-    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+    box-shadow: 5px 8px 10px -5px rgba(0, 0, 0, 0.75);
 }
 
-footer > p {
-    
+footer>p {
+
     font-size: 1.2em;
 }
+
 /* == FOOTER == */

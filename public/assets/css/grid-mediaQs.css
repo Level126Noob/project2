@@ -1,5 +1,4 @@
-
-html {  
+html {
     height: 100%;
     width: 100%;
     display: flex;
@@ -14,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center; 
+    justify-items: center;
 }
 
 /* ! --- ! --- GRID --- ! --- ! */
@@ -52,6 +51,7 @@ footer {
     grid-column: 1 / 3;
     grid-row: 3;
 }
+
 /* ! --- ! --- GRID --- ! --- ! */
 
 
@@ -61,23 +61,25 @@ footer {
     flex-flow: row wrap;
     width: 150px;
     overflow: auto;
-    align-content: flex-start; 
+    align-content: flex-start;
 }
+
 /* ! --- ! --- INNER FLEXBOX --- ! --- ! */
 
 
 /* ! --- ! --- MEDIA QUERIES --- ! --- ! */
-@media only screen and  (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     article {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-items: center; 
+        justify-items: center;
     }
 
-    article > * {
+    article>* {
         width: 100%;
         height: 100%;
     }
 }
+
 /* ! --- ! --- MEDIA QUERIES --- ! --- ! */
