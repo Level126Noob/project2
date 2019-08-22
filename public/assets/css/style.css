@@ -3,7 +3,22 @@
 
 body {
     /* background-color: #ede9d0; */
-    background-image: linear-gradient(to right top, #ff7c60, #fa9667, #f4ad76, #eec28c, #ebd4a7, #ebd4a7, #ebd4a7, #ebd4a7, #eec28c, #f4ad76, #fa9667, #ff7c60);
+    /* background-image: linear-gradient(to right top, #ff7c60, #fa9667, #f4ad76, #eec28c, #ebd4a7, #ebd4a7, #ebd4a7, #ebd4a7, #eec28c, #f4ad76, #fa9667, #ff7c60); */
+    background-image: linear-gradient(45deg, 
+    rgb(249, 193, 102) 0%,
+     rgb(249, 193, 102) 4%,
+     rgb(248, 174, 96) 4%, 
+     rgb(248, 174, 96) 38%,
+     rgb(246, 156, 91) 38%, 
+     rgb(246, 156, 91) 41%,
+     rgb(245, 137, 85) 20%, 
+     rgb(245, 137, 85) 44%,
+     rgb(244, 118, 79) 44%, 
+     rgb(244, 118, 79) 71%,
+     rgb(242, 100, 74) 71%, 
+     rgb(242, 100, 74) 74%,
+     rgb(241, 81, 68) 74%, 
+     rgb(241, 81, 68) 100%);
     background-attachment: fixed;
     font-family: 'Josefin Sans', sans-serif;
     color: #312b2b;
@@ -12,7 +27,7 @@ body {
 header {
     border-radius: 20px;
     border-top-left-radius: 5px;
-    background-color:#c34b36e8;
+    background-color:rgba(241, 82, 68, 0.75);
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
     width: 100%;
     padding: 15px;
@@ -29,8 +44,8 @@ nav {
     height: auto;
     padding: 10px;
     border-radius: 20px;
-    border-top-left-radius: 5px;
-    background-color:#c34b3688;
+    /* border-top-left-radius: 5px; */
+    background-color:rgba(249, 193, 102, 0.753);
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
     
 }
@@ -45,7 +60,7 @@ nav > h1 {
     width: 100%;
     border: none;
     border-radius: 12px;
-    border-top-left-radius: 5px;
+    /* border-top-left-radius: 5px; */
     height: 100%;
 }
 
@@ -64,7 +79,7 @@ aside {
     padding: 20px;
     border-radius: 20px;
     border-top-left-radius: 5px;
-    background-color: #ff7d60d0;
+    background-color: rgba(245, 138, 85, 0.76);
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
 
@@ -83,11 +98,10 @@ aside {
     font-size: 15px;
     color: #312b2b;
     padding: 10px;
-    width: 100%;
+    width: 150px;
     cursor: pointer;
     border: none;
     border-radius: 20px;
-    border-top-left-radius: 5px;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -150,7 +164,6 @@ aside {
 
 .switch-field label {
     border-radius: 20px;
-    border-top-left-radius: 5px;
     margin-right: 5px;
 }
 
@@ -165,7 +178,6 @@ aside {
     background-color: #e9dac0; 
     border: none;
     border-radius: 20px;
-    border-top-left-radius: 5px;
     padding: 10px;
     margin-top: 20px;
 }
@@ -180,7 +192,7 @@ aside {
 main {
     padding: 15px;
     border-radius: 20px;
-    background-color: #00c7f40a;
+    background-color: rgba(249, 193, 102, 0.11);
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
     
     transition: margin-left .5s;
@@ -190,7 +202,7 @@ main {
     padding: 15px; 
     overflow-y: scroll;
     border-radius: 20px;
-    height: 95%;
+    height: 100%;
     width: 100%;
     scrollbar-width: none;
 }
@@ -229,7 +241,7 @@ footer {
     padding: 15px;
     border-radius: 20px;
     border-top-left-radius: 5px;
-    background-color: #ff7d60d0;
+    background-color: rgba(242, 99, 74, 0.747);
     text-align: center;
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
