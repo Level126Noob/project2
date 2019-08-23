@@ -1,5 +1,4 @@
 const express = require("express");
-
 const app = express();
 const PORT = process.env.PORT || 8000;
 app.use(express.urlencoded({
@@ -34,6 +33,7 @@ connection.connect(function (err) {
   console.log("connected as id " + connection.threadId);
 });
 
+//renders index (home page)
 app.get("/", (_, res) => {
   connection.query("SELECT * FROM files", function (err, data) {
     if (err) {
@@ -46,7 +46,8 @@ app.get("/", (_, res) => {
   });
 });
 
-//searchbar code==================================================================================-.-.-.-//
+//searchbar code==============================fml can't get it working fml fml fml====================================================-.-.-.-//
+let searchResult = []
 app.get("/api/files/:file_name", (req, res) => {
   connection.query("SELECT * FROM files WHERE file_name = ?", [req.params.file_name], function (err, result) {
     if (err) {
@@ -60,6 +61,32 @@ app.get("/api/files/:file_name", (req, res) => {
 })
 //======================================================================================================-.-.-.-.**!!@
 
+//ascending page api route==================================================================================================
+app.get("/ascending", (req, res) => {
+  connection.query("SELECT created_at FROM files ORDER BY created_at ASC", [req.params.created_at], function (err, data) {
+    if (err) {
+      throw err;
+    }
+    console.log(data);
+    res.render("ascending", {files: data})
+  })
+})
+//=======================================================================================================================
+
+
+//descending page api route==================================================================================================
+app.get("/descending", (req, res) => {
+  connection.query("SELECT created_at FROM files ORDER BY created_at DESC", [req.params.created_at], function (err, data) {
+    if (err) {
+      throw err;
+    }
+    console.log(data);
+    res.render("descending", {files: data})
+  })
+})
+//=======================================================================================================================
+
+//delete button below
 app.delete("/api/files/:id", (req, res) => {
   connection.query("DELETE FROM files WHERE id = ?", [req.params.id], function (err, result) {
     if (err) {

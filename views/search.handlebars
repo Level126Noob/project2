@@ -1,0 +1,57 @@
+<article class="wrap">
+    <header>
+        <h1>ART Cloud</h1>
+    </header>
+        <nav>
+            <h1></h1>
+              
+            <input id="searchInput" type="text" placeholder="Find...">
+            <button id="searchButton">Search</button>
+        </nav>
+        <aside>
+            <h1>Options</h1>
+            
+            <div class="switch-field">
+                <input type="radio" id="radio-three" name="switch-two" value="yes" checked/>
+                <label for="radio-three">Newest</label>
+                
+                <input type="radio" id="radio-five" name="switch-two" value="no" />
+                <label for="radio-five">Oldest</label>
+            </div>
+
+            <div class="dropSelect">
+                <select class="select-css">
+                    <option>File Type</option>
+                    <option>.txt</option>
+                    <option>.png</option>
+                    <option>.pdf</option>
+                    <option>.fun</option>
+                </select>
+            </div>
+
+            <input class="submitBtn" type="button" value="Apply" />
+        </aside>
+        <main>
+            <h3>Main</h3>
+                <div id="innerGrid">
+                    {{#each file_name}}
+                <p>
+                    <div id="files">
+                        <h4>File ID: {{this.id}}</h4><br>
+                        <h4>File Name: {{this.file_name}}</h4><br>
+                        <h4>File Type: {{this.file_type}}</h4><br>
+                        <h4>File Created At: {{this.created_at}}</h4><br>
+                        <button data-id="{{this.id}}" class="deletebutton">Delete file!</button>
+                    </div>
+                </p>
+            {{/each}}
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>
+               Made by: Travis Abraham, Ryan Wiggins and Alex Barbati
+            </p>
+
+        </footer>
+    </article>

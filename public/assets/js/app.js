@@ -24,10 +24,40 @@ $('#searchButton').click(function (e) {
     $.ajax("/api/files/" + file_name, {
         type: "GET"
     }).then(
-        () => {
+        (data) => {
             console.log("search completed for " + file_name);
+            location.reload("search")
+            //console.log(data);
         }
     )
 
+});
+//=============================================================================
+
+//ascending button input!======================================================
+$('.submitBtn').click(function (e) { 
+    e.preventDefault();
+    $.ajax("/ascending", {
+        type: "GET"
+    }).then(
+         (data) => {
+            console.log(data)
+            location.reload("ascending")
+         }
+    )  
+});
+//=============================================================================
+
+//descending button input!======================================================
+$('.submitBtn').click(function (e) { 
+    e.preventDefault();
+    $.ajax("/descending", {
+        type: "GET"
+    }).then(
+         (data) => {
+            console.log(data)
+            location.reload("descending")
+         }
+    )  
 });
 //=============================================================================
