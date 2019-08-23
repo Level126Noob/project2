@@ -48,11 +48,13 @@ app.get("/", (_, res) => {
 
 //searchbar code==================================================================================-.-.-.-//
 app.get("/api/files/:file_name", (req, res) => {
-  connection.query("SELECT file_name FROM files WHERE file_name = ?", [req.params.file_name], function (err, result) {
+  connection.query("SELECT * FROM files WHERE file_name = ?", [req.params.file_name], function (err, result) {
     if (err) {
       return res.status(500).send("it's broken brohiem");
     }
-    res.render("index", {file_name: result})
+    res.render("search",
+      {files: result}
+    )
     console.log(result)
   })
 })
