@@ -26,7 +26,7 @@ $('#searchButton').click(function (e) {
     }).then(
         (data) => {
             console.log("search completed for " + file_name);
-            location.reload("search")
+            // location.reload("search")
             //console.log(data);
         }
     )
