@@ -86,6 +86,21 @@ app.get("/descending", (req, res) => {
 })
 //=======================================================================================================================
 
+//==============================Putting filepath into mySql==============================================================
+app.post("/:filename, file_type", (req, res) => {
+  connection.query("INSERT INTO files (file_name, file_type) VALUES (?, ?)", [req.body.file_name], function (err, data) {
+    if (err) {
+      throw err;
+    }
+
+    res.json({
+      id: result.insertId
+    });
+    console.log(result)
+})
+})
+//=======================================================================================================================
+
 //delete button below
 app.delete("/api/files/:id", (req, res) => {
   connection.query("DELETE FROM files WHERE id = ?", [req.params.id], function (err, result) {
