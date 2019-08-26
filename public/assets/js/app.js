@@ -20,13 +20,13 @@ $('#searchButton').click(function (e) {
     var file_name = $('#searchInput').val().trim();
     console.log(file_name);
 
-    $.ajax("/api/files/" + file_name, {
+    $.ajax("/" + file_name, {
         type: "GET"
     }).then(
         (data) => {
             console.log("search completed for " + file_name);
-            // location.reload("search")
-            //console.log(data);
+            location.replace("/" + file_name)
+            // console.log(data);
         }
     )
 
@@ -40,8 +40,8 @@ $('.submitBtn').click(function (e) {
         type: "GET"
     }).then(
         (data) => {
-            console.log(data)
-            location.reload("ascending")
+            // console.log(data)
+            // location.reload("/ascending")
         }
     )
 });
@@ -54,8 +54,8 @@ $('.submitBtn').click(function (e) {
         type: "GET"
     }).then(
         (data) => {
-            console.log(data)
-            location.reload("descending")
+            // console.log(data)
+            // location.reload("/descending")
         }
     )
 });
