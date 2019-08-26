@@ -66,7 +66,7 @@ app.get("/", (_, res) => {
 
 //ascending page api route==================================================================================================
 app.get("/ascending", (req, res) => {
-  connection.query("SELECT created_at FROM files ORDER BY created_at ASC", [req.params.created_at], function (err, data) {
+  connection.query("SELECT * FROM files ORDER BY created_at ASC", [req.params.created_at], function (err, data) {
     if (err) {
       throw err;
     }
@@ -79,7 +79,7 @@ app.get("/ascending", (req, res) => {
 
 //descending page api route==================================================================================================
 app.get("/descending", (req, res) => {
-  connection.query("SELECT created_at FROM files ORDER BY created_at DESC", [req.params.created_at], function (err, data) {
+  connection.query("SELECT * FROM files ORDER BY created_at DESC", [req.params.created_at], function (err, data) {
     if (err) {
       throw err;
     }
