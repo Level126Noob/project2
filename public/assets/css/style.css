@@ -2,8 +2,6 @@
 * {box-sizing: border-box;}
 
 body {
-    /* background-color: #ede9d0; */
-    /* background-image: linear-gradient(to right top, #ff7c60, #fa9667, #f4ad76, #eec28c, #ebd4a7, #ebd4a7, #ebd4a7, #ebd4a7, #eec28c, #f4ad76, #fa9667, #ff7c60); */
     background-image: linear-gradient(45deg, 
     rgb(249, 193, 102) 0%,
      rgb(249, 193, 102) 4%,
@@ -60,7 +58,6 @@ nav > h1 {
     width: 100%;
     border: none;
     border-radius: 12px;
-    /* border-top-left-radius: 5px; */
     height: 100%;
 }
 
@@ -84,178 +81,153 @@ aside {
 }
 
 
-
-
-/* ------------------------------------------- */ 
- 
-.widget select,
-.no-widget .select {
-  position: absolute;
-  left: -5000em;
-  height: 0;
-  overflow: hidden;
-}
-
-.select {
-  position: relative;
-  display: inline-block;
-  font-size: 0.625em; 
-  font-family: Verdana, Arial, sans-serif;
-  padding: 0.1em 2.5em 0.2em 0.5em; 
-  width: 10em; 
-  border: 0.2em solid #000; 
-  border-radius: 0.4em; 
-  box-shadow: 0 0.1em 0.2em rgba(0,0,0,.45); 
-  background : #F0F0F0;
-  background: -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
-  background: linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
-}
- 
-.select .value {
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top;
-}
- 
-.select:after {
-  content: "▼";
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-  width: 2em; 
-  top: 0;
-  right: 0;
-  padding-top: .1em;
-  text-align: center;
-  border-left: .2em solid #000;
-  border-radius: 0 .1em .1em 0;
-  background-color: #000;
-  color: #FFF;
-}
-
- .select.active,
-.select:focus {
-  box-shadow: 0 0 3px 1px #227755;
-  outline: none;
-}
-
-.select .optList {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 2;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background: #f0f0f0;
-  border: .2em solid #000;
-  border-top-width : .1em;
-  border-radius: 0 0 .4em .4em;
-  box-shadow: 0 .2em .4em rgba(0,0,0,.4);
-  min-width: 100%;
-  max-height: 10em; 
-  overflow-y: auto;
-  overflow-x: hidden;
-}
- 
-.select .option {
-  padding: .2em .3em;
-}
- 
-.select .highlight {
-  background: #000;
-  color: #FFFFFF;
-}
-
-.select .optList.hidden {
-  max-height: 0;
-  visibility: hidden;
-}
-
-/* ------------------------------------------- */
-
-/* .select-css {
-    display: block;
-    font-size: 15px;
-    color: #312b2b;
-    padding: 10px;
-    width: 150px;
-    cursor: pointer;
-    border: none;
-    border-radius: 20px;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    background-color: #e9dac0;
-  }
-  .select-css::-ms-expand {
-    display: none;
-    background-color: rgb(209, 23, 23);
-  }
-  /* .select-css:hover {
-    background-color: rgb(209, 23, 23);
-  } */
-  .select-css:focus {
-    outline: none;
-    
-  }
-  .select-css option {
-  background: #bdb19c;
-      padding: 4px 0;
-  }
-
-  .select-css option:hover {
-    background-color: rgb(209, 23, 23);
-    } */
-
-
-
-
-
-/* ------------------------ */
+/* ----- ----- Switch State ----- ----- */
 .switch-field {
-    display: flex;
-    margin-top: 20px;
+  display: flex;
 }
 
 .switch-field input {
-	position: absolute !important;
-	clip: rect(0, 0, 0, 0); /* */
-	height: 1px;
-	width: 1px;
-	border: 0;
-	overflow: hidden;
+position: absolute !important;
+clip: rect(0, 0, 0, 0); /* */
+height: 1px;
+width: 1px;
+border: 0;
+overflow: hidden;
 }
 
-.switch-field label {
-	color: #312b2b;
-	font-size: 14px;
-	padding: 15px;
-	transition: all .2s ease-in-out;
+.switch-field label { 
+  border-radius: 50px;
+  height: 45px;
+  margin-right: 5px;
+color: #312b2b;
+font-size: 14px;
+padding: 15px;
+transition: all .2s ease-in-out;
 }
 
 .switch-field label:hover {
-	cursor: pointer;
+cursor: pointer;
 }
 
 .switch-field input:checked + label {
-	background-color: #e9dac0;
-	color: #312b2b;
-}
-
-.switch-field label {
-    border-radius: 20px;
-    margin-right: 5px;
+background-color: #e9dac0;
+color: #312b2b;
 }
 
 
+/* ----- ----- Select ----- ----- */
+/* .select{
+  display: block;
+  font-size: 15px;
+  color: #312b2b;
+  padding: 10px;
+  height: 45px;
+  width: 150px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #e9dac0;
+}
+.select::-ms-expand {
+  background-color: rgb(173, 140, 140);
+}
+.select:hover {
+  background-color: #e9dac03f;
+}
+.select:focus {
+  outline: none;
+}
+.select option {
+  background: #e9dac0;
+  padding: 4px 0;
+}
+
+.select option:hover {
+  background-color: rgb(209, 23, 23);
+} */
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: #e9dac0;
+  border-radius: 20px;
+  padding: 10px;
+  
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: rgb(0, 0, 0) transparent transparent transparent;
+  color: greenyellow;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent rgb(0, 0, 0) transparent;
+  top: 7px;
+}
+
+.select-items {
+  position: absolute;
+  background-color: #e9dac0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.75);
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+/* ----- ----- Upload Button ----- ----- */
+.uploadWrap {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upButton {
+  border-radius: 20px;
+  border: none;
+  background-color: #e9dac0;
+  padding: 10px;
+}
+
+.uploadWrap input[type=file] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.uploadWrap input:hover {
+  cursor: pointer;
+}
 
 
-
-/* ------------------------ */
+/* ----- ----- Submit ----- ----- */
 
 .submitBtn {
     color: #312b2b;
@@ -333,6 +305,16 @@ footer {
 footer > p {
     
     font-size: 1.2em;
+}
+
+.userSection {
+  margin-right: 20px;
+  float: right;
+}
+
+a {
+  margin-left: 20px;
+  font-size: .75em;
 }
 /* == FOOTER == */
 

@@ -41,6 +41,9 @@ nav {
 aside {
     grid-column: 1;
     grid-row: 2;
+    display: grid;
+    flex-flow: column;
+    grid-gap: 20px;
 }
 
 main {
@@ -58,7 +61,7 @@ footer {
 /* ! --- ! --- INNER FLEXBOX --- ! --- ! */
 #innerGrid {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap-reverse;
     width: 150px;
     overflow: auto;
     align-content: flex-start; 

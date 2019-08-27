@@ -3,7 +3,6 @@
         <h1>ART Cloud</h1>
     </header>
         <nav>
-            <h1></h1>
              <form id="search" action="#">
                 <input type="text" id="searchInput" name="myInput" onkeypress="handle" placeholder="Find...">
                 <button id="searchButton">Search</button>
@@ -20,34 +19,53 @@
                 <label for="radio-five">Oldest</label>
             </div>
 
-            <div class="dropSelect">
-                <select class="select-css">
+            <div class="custom-select">
+                <select class="custom-select">
+                    <option value="0">.txt</option>
+                    <option value="1">.mp4</option>
+                    <option value="2">.pdf</option>
+                    <option value="3">.mp3</option>
+                    <option value="4">.exe</option>
+                    <option value="5">.html</option>
+                    <option value="6">.css</option>
+                    <option value="7">.js</option>
+                </select>
+            </div>
+            
+            {{!-- <form><input type="file" class="filepath">
+            <select class="select-filetype">
                     <option>File Type</option>
                     <option>.txt</option>
                     <option>.png</option>
                     <option>.pdf</option>
-                    <option>.fun</option>
+                    <option>.jpeg</option>
                 </select>
+            <button type="submit" class="filebutton">Sumbit File</button></form> --}}
+
+            <div class="userSection"> 
+                <div class="uploadWrap">
+                    <button class="upButton">Upload</button>
+                    <input type="file" name="upFile">
+                </div>
+                <a href="#">Login</a>
             </div>
 
             <input class="submitBtn" type="button" value="Apply" />
         </aside>
         <main>
-            <h3>Main</h3>
-                <div id="innerGrid">
-                    {{#each files}}
-                <p>
-                    <div id="files">
-                        <h4>File ID: {{id}}</h4><br>
-                        <h4>File Name: {{file_name}}</h4><br>
-                        <h4>File Type: {{file_type}}</h4><br>
-                        <h4>File Created At: {{created_at}}</h4><br>
-                        <button data-id="{{this.id}}" class="deletebutton">Delete file!</button>
-                    </div>
-                </p>
-            {{/each}}
-                </div>
-            </section>
+            <div id="innerGrid">
+                {{#each files}}
+                    <p>
+                        <div id="files">
+                            <h4>File ID: {{this.id}}</h4><br>
+                            <h4>File Name: {{this.file_name}}</h4><br>
+                            <h4>File Type: {{this.file_type}}</h4><br>
+                            <h4>File Created At: {{this.created_at}}</h4><br>
+                            <button data-id="{{this.id}}" class="deletebutton">Delete file!</button>
+                        </div>
+                    </p>
+                {{/each}}
+            </div>
         </main>
         <footer>
             <p>
