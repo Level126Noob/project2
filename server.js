@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 8000;
+const path = require("path")
 app.use(express.urlencoded({
   extended: true
 }));
@@ -11,7 +12,8 @@ app.use(express.static("public"));
 const exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({
-  defaultLayout: "main"
+  defaultLayout: "main",
+  layoutsDir: path.join(__dirname, "./views/layouts")
 }))
 
 app.set("view engine", "handlebars");
@@ -33,6 +35,20 @@ connection.connect(function (err) {
   console.log("connected as id " + connection.threadId);
 });
 
+//searchbar code==============================it's working now====================================================-.-.-.-//
+app.get("/:file_name", (req, res) => {
+  connection.query("SELECT * FROM files WHERE file_name = ?", [req.params.file_name], function (err, result) {
+    if (err) {
+      return res.status(500).send("it's broken brohiem");
+    }
+    res.render("search",
+      {files: result}
+    )
+    
+  })
+})
+//======================================================================================================-.-.-.-.**!!@
+
 //renders index (home page)
 app.get("/", (_, res) => {
   connection.query("SELECT * FROM files", function (err, data) {
@@ -46,24 +62,11 @@ app.get("/", (_, res) => {
   });
 });
 
-//searchbar code==============================fml can't get it working fml fml fml====================================================-.-.-.-//
-let searchResult = []
-app.get("/api/files/:file_name", (req, res) => {
-  connection.query("SELECT * FROM files WHERE file_name = ?", [req.params.file_name], function (err, result) {
-    if (err) {
-      return res.status(500).send("it's broken brohiem");
-    }
-    res.render("search",
-      {files: result}
-    )
-    
-  })
-})
-//======================================================================================================-.-.-.-.**!!@
+
 
 //ascending page api route==================================================================================================
 app.get("/ascending", (req, res) => {
-  connection.query("SELECT created_at FROM files ORDER BY created_at ASC", [req.params.created_at], function (err, data) {
+  connection.query("SELECT * FROM files ORDER BY created_at ASC", [req.params.created_at], function (err, data) {
     if (err) {
       throw err;
     }
@@ -76,13 +79,28 @@ app.get("/ascending", (req, res) => {
 
 //descending page api route==================================================================================================
 app.get("/descending", (req, res) => {
-  connection.query("SELECT created_at FROM files ORDER BY created_at DESC", [req.params.created_at], function (err, data) {
+  connection.query("SELECT * FROM files ORDER BY created_at DESC", [req.params.created_at], function (err, data) {
     if (err) {
       throw err;
     }
     console.log(data);
     res.render("descending", {files: data})
   })
+})
+//=======================================================================================================================
+
+//==============================Putting filepath into mySql==============================================================
+app.post("/:filename, file_type", (req, res) => {
+  connection.query("INSERT INTO files (file_name, file_type) VALUES (?, ?)", [req.body.file_name], function (err, data) {
+    if (err) {
+      throw err;
+    }
+
+    res.json({
+      id: result.insertId
+    });
+    console.log(result)
+})
 })
 //=======================================================================================================================
 
