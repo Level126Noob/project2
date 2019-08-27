@@ -1,4 +1,12 @@
 
+document.getElementById('search').onkeydown(function (e) {
+  var code = (e.keyCode ? e.keyCode : e.which)
+  if (code === 13) { 
+    document.getElementById('searchButton').trigger('click')
+  }
+})
+// ========================= DROP SELECT
+
 // Event listener to tell if the widget is working and which one to use
 window.addEventListener("load", function () {
   document.body.classList.remove("no-widget")
@@ -96,3 +104,4 @@ window.addEventListener('load', function () {
     })
   })
 })
+
