@@ -56,8 +56,8 @@
         <main>
             <div id="innerGrid">
                 {{#each files}}
-                        <div id="files" class="infoMenu">
-                            <button class="infoBtn" onclick="click">
+                        <div id="files" class="infoMenu" >
+                            <button class="infoBtn" onclick="infoClick()" data-id="{{this.id}}">
                                 I
                             </button>
                             <h4>{{this.file_name}}.{{this.file_type}}</h4>
@@ -65,7 +65,7 @@
                                 <ul>
                                     <li><h4>ID: {{this.id}}</h4></li>
                                     <li><h4>Created: {{this.created_at}}</h4></li>
-                                    <li><button data-id="{{this.id}}" class="deletebutton">X</button></li>
+                                    {{!-- <li><button data-id="{{this.id}}" class="deletebutton">X</button></li> --}}
                                 </ul>
                             </div>
                         </div>

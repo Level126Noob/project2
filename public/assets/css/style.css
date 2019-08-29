@@ -241,7 +241,7 @@ main {
 
 .infoMenu {
   height: min-content;
-  width: 150px;
+  width: 10em;
   margin: 20px;
   padding: 15px;
   border-radius: 20px;
@@ -250,10 +250,39 @@ main {
   box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
 
+.infoBtn {
+  background-color: #312b2b;
+  color: #e9dac0;
+  border-style: none;
+  border-radius: 2px;
+  cursor: pointer;
+  float: right;
+}
 
+.infoBtn:hover, .infoBtn:focus{
+    background-color: aqua;
+}
 
+.dropContent {
+  display: none;
+  min-width: 150px;
+  overflow: auto;
+  background-color: #312b2b;
+  box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+  z-index: 1;
+}
 
+.dropContent h4 { 
+  color: #e9dac0;
+  padding: 2em;
+  display: block;
+}
 
+.dropContent h4:hover {
+  background: #695d5d;
+}
+
+.show {display: block;}
 /* #innerGrid > img {
     height: 30%;
     width: auto;
