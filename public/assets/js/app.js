@@ -36,26 +36,12 @@ $('#searchButton').click(function (e) {
 //ascending button input!======================================================
 $('#radio-five').click(function (e) {
     e.preventDefault();
-    $.ajax("/ascending", {
-        type: "GET"
-    }).then(
-        (data) => {
-            // console.log(data)
-            location.replace("/ascending")
-        }
-    )
-});
-//=============================================================================
-
-//descending button input!======================================================
-$('#radio-three').click(function (e) {
-    e.preventDefault();
     $.ajax("/descending", {
         type: "GET"
     }).then(
         (data) => {
             // console.log(data)
-            location.reload("/descending")
+            location.replace("/descending")
         }
     )
 });
