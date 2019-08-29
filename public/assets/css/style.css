@@ -1,5 +1,323 @@
 @import url("grid-mediaQs.css");
 
-article > * {
-    border: 1px red solid;
+
+body {
+    /* background-color: #ede9d0; */
+    /* background-image: linear-gradient(to right top, #ff7c60, #fa9667, #f4ad76, #eec28c, #ebd4a7, #ebd4a7, #ebd4a7, #ebd4a7, #eec28c, #f4ad76, #fa9667, #ff7c60); */
+    background-image: linear-gradient(45deg, 
+    rgb(249, 193, 102) 0%,
+     rgb(249, 193, 102) 4%,
+     rgb(248, 174, 96) 4%, 
+     rgb(248, 174, 96) 38%,
+     rgb(246, 156, 91) 38%, 
+     rgb(246, 156, 91) 41%,
+     rgb(245, 137, 85) 20%, 
+     rgb(245, 137, 85) 44%,
+     rgb(244, 118, 79) 44%, 
+     rgb(244, 118, 79) 71%,
+     rgb(242, 100, 74) 71%, 
+     rgb(242, 100, 74) 74%,
+     rgb(241, 81, 68) 74%, 
+     rgb(241, 81, 68) 100%);
+    background-attachment: fixed;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #312b2b;
 }
+
+header {
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    background-color:rgba(241, 82, 68, 0.75);
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+    width: 100%;
+    padding: 15px;
+}
+
+header > h1{
+    width: auto; 
+    font-size: 2em; 
+}
+
+/* == NAV == */
+nav {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 20px;
+    /* border-top-left-radius: 5px; */
+    background-color:rgba(249, 193, 102, 0.753);
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+    
+}
+
+nav > h1 {
+    width: auto;
+    float: left;
+    font-size: 2em;
+}
+
+#searchInput {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    /* border-top-left-radius: 5px; */
+    height: 100%;
+}
+
+#searchInput[type=text]  {
+    padding: 15px;
+    font-size: 20px;
+    color: rgb(102, 116, 110);
+    background-color: #e9dac0;
+}
+
+/* == NAV == */
+
+
+/* == ASIDE == */
+aside {
+    padding: 20px;
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    background-color: rgba(245, 138, 85, 0.76);
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+}
+
+
+/* ----- ----- Switch State ----- ----- */
+.switch-field {
+    display: flex;
+}
+
+.switch-field input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0); /* */
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.switch-field label { 
+    border-radius: 50px;
+    height: 45px;
+    margin-right: 5px;
+	color: #312b2b;
+	font-size: 14px;
+	padding: 15px;
+	transition: all .2s ease-in-out;
+}
+
+.switch-field label:hover {
+	cursor: pointer;
+}
+
+.switch-field input:checked + label {
+	background-color: #e9dac0;
+	color: #312b2b;
+}
+
+
+/* ----- ----- Select ----- ----- */
+/* .select{
+    display: block;
+    font-size: 15px;
+    color: #312b2b;
+    padding: 10px;
+    height: 45px;
+    width: 150px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #e9dac0;
+}
+.select::-ms-expand {
+    background-color: rgb(173, 140, 140);
+}
+.select:hover {
+    background-color: #e9dac03f;
+}
+.select:focus {
+    outline: none;
+}
+.select option {
+    background: #e9dac0;
+    padding: 4px 0;
+}
+
+.select option:hover {
+    background-color: rgb(209, 23, 23);
+} */
+
+.custom-select {
+    position: relative;
+}
+
+.custom-select select {
+    display: none;
+}
+
+.select-selected {
+    background-color: #e9dac0;
+    border-radius: 20px;
+    padding: 10px;
+    
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: rgb(0, 0, 0) transparent transparent transparent;
+    color: greenyellow;
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent rgb(0, 0, 0) transparent;
+    top: 7px;
+}
+
+.select-items {
+    position: absolute;
+    background-color: #e9dac0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.75);
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+/* ----- ----- Upload Button ----- ----- */
+.uploadWrap {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.upButton {
+    border-radius: 20px;
+    border: none;
+    background-color: #e9dac0;
+    padding: 10px;
+}
+
+.uploadWrap input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.uploadWrap input:hover {
+    cursor: pointer;
+}
+
+
+/* ----- ----- Submit ----- ----- */
+.submitBtn {
+    color: #312b2b;
+    background-color: #e9dac0; 
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    height: 45px;
+}
+
+.submitBtn:hover {
+    cursor: pointer;
+}
+/* == ASIDE == */
+
+
+
+
+
+/* == MAIN == */
+main {
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgba(249, 193, 102, 0.11);
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+    
+    transition: margin-left .5s;
+}
+
+#innerGrid{
+    padding: 15px; 
+    overflow-y: scroll;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    scrollbar-width: none;
+}
+
+#innerGrid::-webkit-scrollbar {
+    display: block;
+}
+
+.testDiv {
+    width: max-content;  
+    height: min-content;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    background-color: #83b4bdee;
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+}
+
+#innerGrid > img {
+    height: 30%;
+    width: auto;
+    margin: 20px;
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+}
+/* == MAIN == */
+
+
+
+
+
+/* == FOOTER == */
+footer {
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    background-color: rgba(242, 99, 74, 0.747);
+    text-align: center;
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+}
+
+footer > p {
+    font-size: .75em;
+    color: #312b2b6c;
+}
+
+.userSection {
+    margin-right: 20px;
+    float: right;
+}
+
+a {
+    margin-left: 20px;
+    font-size: .75em;
+}
+/* == FOOTER == */

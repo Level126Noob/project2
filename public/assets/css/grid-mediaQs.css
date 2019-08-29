@@ -1,47 +1,72 @@
-html {
+
+html {  
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+body {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center; 
-    height: 100%;
-    width: 100%;
-}
-
-body {
-    width: 90%;
-    height: 100%;
 }
 
 /* ! --- ! --- GRID --- ! --- ! */
 article {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 20% 40% 40%;
-    grid-template-rows: 10% 80% 10%;
-    width: 100%;
-    height: 100%;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 15% 75% 10%;
+    width: 90%;
+    height: 90%;
+    margin: 10px;
+}
+
+header {
+    grid-column: 1;
+    grid-row: 1;
 }
 
 nav {
-    grid-column: 1 / 4;
+    grid-column: 2;
     grid-row: 1;
 }
 
 aside {
     grid-column: 1;
     grid-row: 2;
+    display: grid;
+    flex-flow: column;
+    grid-gap: 20px;
 }
 
 main {
-    grid-column: 2 / 4;
+    grid-column: 2 / 3;
     grid-row: 2;
 }
 
 footer {
-    grid-column: 1 / 4;
+    grid-column: 1 / 3;
     grid-row: 3;
 }
 /* ! --- ! --- GRID --- ! --- ! */
+
+
+/* ! --- ! --- INNER FLEXBOX --- ! --- ! */
+#innerGrid {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    width: 150px;
+    overflow: auto;
+    align-content: flex-start; 
+}
+/* ! --- ! --- INNER FLEXBOX --- ! --- ! */
 
 
 /* ! --- ! --- MEDIA QUERIES --- ! --- ! */
