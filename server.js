@@ -35,20 +35,6 @@ connection.connect(function (err) {
   console.log("connected as id " + connection.threadId);
 });
 
-//searchbar code==============================it's working now====================================================-.-.-.-//
-app.get("/:file_name", (req, res) => {
-  connection.query("SELECT * FROM files WHERE file_name = ?", [req.params.file_name], function (err, result) {
-    if (err) {
-      return res.status(500).send("it's broken brohiem");
-    }
-    res.render("search",
-      {files: result}
-    )
-    
-  })
-})
-//======================================================================================================-.-.-.-.**!!@
-
 //renders index (home page)
 app.get("/", (_, res) => {
   connection.query("SELECT * FROM files", function (err, data) {
@@ -62,16 +48,30 @@ app.get("/", (_, res) => {
   });
 });
 
+//searchbar code==============================it's working now====================================================-.-.-.-//
+app.get("/search/:file_name", (req, res) => {
+  connection.query("SELECT * FROM files WHERE file_name = ?", [req.params.file_name], function (err, result) {
+    if (err) {
+      return res.status(500).send("it's broken brohiem");
+    }
+    res.render("search", {
+      files: result
+    })
 
+  })
+})
+//======================================================================================================-.-.-.-.**!!@
 
 //ascending page api route==================================================================================================
 app.get("/ascending", (req, res) => {
-  connection.query("SELECT * FROM files ORDER BY created_at ASC", [req.params.created_at], function (err, data) {
+  connection.query("SELECT * FROM files ORDER BY created_at ASC", [req.params.created_at], function (err, result) {
     if (err) {
       throw err;
     }
-    console.log(data);
-    res.render("ascending", {files: data})
+    console.log(result);
+    res.render("ascending", {
+      files: result
+    })
   })
 })
 //=======================================================================================================================
@@ -79,12 +79,14 @@ app.get("/ascending", (req, res) => {
 
 //descending page api route==================================================================================================
 app.get("/descending", (req, res) => {
-  connection.query("SELECT * FROM files ORDER BY created_at DESC", [req.params.created_at], function (err, data) {
+  connection.query("SELECT * FROM files ORDER BY created_at DESC", [req.params.created_at], function (err, result) {
     if (err) {
       throw err;
     }
-    console.log(data);
-    res.render("descending", {files: data})
+    console.log(result);
+    res.render("descending", {
+      files: result
+    })
   })
 })
 //=======================================================================================================================
@@ -100,7 +102,7 @@ app.post("/:filename, file_type", (req, res) => {
       id: result.insertId
     });
     console.log(result)
-})
+  })
 })
 //=======================================================================================================================
 

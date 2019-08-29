@@ -20,12 +20,12 @@ $('#searchButton').click(function (e) {
     var file_name = $('#searchInput').val().trim();
     console.log(file_name);
 
-    $.ajax("/" + file_name, {
+    $.ajax("/search/" + file_name, {
         type: "GET"
     }).then(
         (data) => {
             console.log("search completed for " + file_name);
-            location.replace("/" + file_name)
+            location.replace("/search/" + file_name)
             // console.log(data);
         }
     )
@@ -34,28 +34,28 @@ $('#searchButton').click(function (e) {
 //=============================================================================
 
 //ascending button input!======================================================
-$('.submitBtn').click(function (e) {
+$('#radio-five').click(function (e) {
     e.preventDefault();
     $.ajax("/ascending", {
         type: "GET"
     }).then(
         (data) => {
             // console.log(data)
-            // location.reload("/ascending")
+            location.replace("/ascending")
         }
     )
 });
 //=============================================================================
 
 //descending button input!======================================================
-$('.submitBtn').click(function (e) {
+$('#radio-three').click(function (e) {
     e.preventDefault();
     $.ajax("/descending", {
         type: "GET"
     }).then(
         (data) => {
             // console.log(data)
-            // location.reload("/descending")
+            location.reload("/descending")
         }
     )
 });
