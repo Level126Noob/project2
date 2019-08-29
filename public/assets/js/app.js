@@ -64,7 +64,7 @@ $('.submitBtn').click(function (e) {
 //=================grabbing file upload path using jquery=======================
 (function ($, window, document, undefined) {
     $(function () {
-        $('.filepath').each(function () {
+        $('.filePath').each(function () {
             var $input = $(this),
                 $label = $input.next('label'),
                 labelVal = $label.html();
@@ -86,7 +86,7 @@ $('.submitBtn').click(function (e) {
                     
                 console.log(fileName);
                 
-                $(".filebutton").click(function (event) {
+                $(".fileButton").click(function (event) {
                 var filetype = $('.select-filetype').val().trim();
                 // Send the POST request.
                 $.ajax("/" + fileName + filetype, {
