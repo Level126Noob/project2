@@ -62,21 +62,6 @@ app.get("/search/:file_name", (req, res) => {
 })
 //======================================================================================================-.-.-.-.**!!@
 
-//ascending page api route==================================================================================================
-app.get("/ascending", (req, res) => {
-  connection.query("SELECT * FROM files ORDER BY created_at ASC", [req.params.created_at], function (err, result) {
-    if (err) {
-      throw err;
-    }
-    console.log(result);
-    res.render("ascending", {
-      files: result
-    })
-  })
-})
-//=======================================================================================================================
-
-
 //descending page api route==================================================================================================
 app.get("/descending", (req, res) => {
   connection.query("SELECT * FROM files ORDER BY created_at DESC", [req.params.created_at], function (err, result) {
