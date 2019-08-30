@@ -11,6 +11,7 @@ $(".deletebutton").on("click", function (event) {
     );
 });
 
+
 const searchInput = document.querySelector('#searchInput')
 const grabSearch = console.log(searchInput.value)
 

@@ -83,23 +83,3 @@ document.getElementById('search').keydown(function (e) {
     document.getElementById('searchButton').trigger('click')
   }
 })
-
-// this just says on click show menu
-function infoClick() {
-  document.getElementById("infoDrop").classList.toggle("show")
-}
-
-// will close menu if click outside
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdown = document.getElementsByClassName("dropContent")
-    var i
-    for (i = 0; i < dropdown.length; i++) {
-      var openDrop = dropdown[i]
-      if (openDrop.classList.contains('show')) {
-        openDrop.classList.remove('show')
-      }
-    }
-  }
-}
-

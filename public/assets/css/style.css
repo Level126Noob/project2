@@ -95,38 +95,41 @@ aside {
 
 
 /* ----- ----- Switch State ----- ----- */
-.switch-field {
+/* .switch-field {
   display: flex;
+} */
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.switch-field input {
-  position: absolute !important;
-  clip: rect(0, 0, 0, 0); /* */
-  height: 1px;
-  width: 1px;
-  border: 0;
-  overflow: hidden;
+img {
+    width: 30px;
+    height: auto;
 }
 
-.switch-field label { 
-  border-radius: 50px;
-  height: 45px;
-  margin-right: 5px;
-  color: #312b2b;
-  font-size: 14px;
-  padding: 15px;
-  transition: all .2s ease-in-out;
+.newest, .oldest {
+  transition: ease .5s;
 }
 
-.switch-field label:hover {
-cursor: pointer;
+.newest {
+  float: left;
+  margin-left: .75rem;
 }
 
-.switch-field input:checked + label {
-background-color: #e9dac0;
-color: #312b2b;
+.newest:hover {
+  transform: translateY(-10px)
 }
 
+.oldest {
+  float: right;
+  margin-right: .75rem;
+}
+
+.oldest:hover {
+  transform: translateY(10px)
+}
 
 /* ----- ----- Select ----- ----- */
 
@@ -251,38 +254,61 @@ main {
 }
 
 .infoBtn {
+    border-style: none;
+    background: #312b2b;
+    color: #e9dac0;
+    border-radius: 300px;
+    float: right;
+    transition: ease-in-out;
+}
+
+.deletebutton {
+  float: right; 
+  border: none;
+  background-color: transparent;
+}
+
+.deleteX {
+    width: 12px;
+    height: auto;
+}
+
+.deleteX:hover {
+    transform: rotate(15deg);
+    cursor: pointer; 
+}
+
+.infoHover {
+  position: relative;transition: ease-in-out 2s;
+}
+
+.infoContent {
+  position: absolute;
   background-color: #312b2b;
   color: #e9dac0;
-  border-style: none;
-  border-radius: 2px;
-  cursor: pointer;
-  float: right;
-}
-
-.infoBtn:hover, .infoBtn:focus{
-    background-color: aqua;
-}
-
-.dropContent {
-  display: none;
-  min-width: 150px;
-  overflow: auto;
-  background-color: #312b2b;
+  width: 100px;
   box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
   z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
-.dropContent h4 { 
+.infoContent h4 {
   color: #e9dac0;
-  padding: 2em;
-  display: block;
+  padding: 10px;
 }
 
-.dropContent h4:hover {
-  background: #695d5d;
+.infoHover:hover .infoContent{
+    display: contents;
+    visibility: visible;
+    opacity: 1;
 }
 
-.show {display: block;}
+.infoHover:hover .infoBtn {
+  color: red;
+  cursor: pointer;
+}
 /* #innerGrid > img {
     height: 30%;
     width: auto;
@@ -317,7 +343,7 @@ footer > p {
   float: right;
 }
 
-a {
+.login {
   margin-left: 20px;
   font-size: .75em;
 }
