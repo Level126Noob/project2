@@ -106,3 +106,21 @@ $("#register").click(function (event) {
     );
 });
 //================================================================================
+
+//======================================checking if userpass if valid get request==
+$("#login").click(function (event) {
+    event.preventDefault();
+    var username = $("#username").val().trim();
+    var password = $("#password").val().trim();
+    var userpass = username + password;
+    $.ajax("/login/" + userpass, {
+        type: "GET",
+    }).then(
+        function(data) {
+            // console.log(data);
+
+            location.replace("/")
+        }
+    )
+})
+//=================================================================================

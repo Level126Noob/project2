@@ -122,6 +122,25 @@ app.post("/login/:userpass", (req, res) => {
 });
 //=========================================================================================
 
+//=========================checking if the userpass is valid===============================
+
+app.get("/login/:userpass", (req, res) => {
+  connection.query("SELECT userpass FROM users WHERE userpass = ?", [req.params.userpass], function (err, result) {
+    if (err) {
+      throw err
+    }
+    console.log(result);
+    if (result.length === 0) {
+      return res.status(404).send("Use a valid username or password");
+    }
+    res.render("login", {
+      users: result
+    })
+  })
+});
+
+//=========================================================================================
+
 
 app.listen(PORT, function () {
   console.log("Server listening on: http://localhost:" + PORT);
