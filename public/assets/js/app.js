@@ -11,10 +11,6 @@ $(".deletebutton").on("click", function (event) {
     );
 });
 
-
-const searchInput = document.querySelector('#searchInput')
-const grabSearch = console.log(searchInput.value)
-
 //searchbar input!===================================================/=/=/=/
 $('#searchButton').click(function (e) {
     e.preventDefault();
@@ -93,3 +89,20 @@ $('#radio-five').click(function (e) {
 
 //jq ajax post request for inserting file_name into DB==========================
 //===============================================================================
+
+//post request for userpass on login page=========================================
+$("#register").click(function (event) {
+    event.preventDefault();
+    var username = $("#newUsername").val().trim();
+    var password = $("#newPassword").val().trim();
+    var userpass = username + password;
+    // Send the POST request.
+    $.ajax("/login/" + userpass, {
+        type: "POST",
+    }).then(
+        function (data) {
+            console.log(data);
+        }
+    );
+});
+//================================================================================

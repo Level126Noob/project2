@@ -103,6 +103,25 @@ app.delete("/api/files/:id", (req, res) => {
   });
 });
 
+//get request for login page to render on localhost8000:/login/=====================
+app.get("/login/", (_, res) => {
+  res.render("login")
+})
+//=====================================================================================
+
+//post request to put registering a new username and password into the userpass column==
+app.post("/login/:userpass", (req, res) => {
+  connection.query("INSERT INTO users (userpass) VALUE (?)", [req.params.userpass], function (err, result) {
+    if (err) {
+      throw err
+    }
+    res.json({
+      id: result.insertId
+    });
+  })
+});
+//=========================================================================================
+
 
 app.listen(PORT, function () {
   console.log("Server listening on: http://localhost:" + PORT);
