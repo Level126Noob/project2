@@ -119,7 +119,7 @@ $("#login").click(function (event) {
         function(data) {
             // console.log(data);
 
-            location.replace("/")
+            location.replace("/home")
         }
     )
 })

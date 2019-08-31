@@ -35,14 +35,17 @@ connection.connect(function (err) {
   console.log("connected as id " + connection.threadId);
 });
 
-//renders index (home page)
 app.get("/", (_, res) => {
+  res.render("login")
+})
+//renders index (home page)
+app.get("/home", (_, res) => {
   connection.query("SELECT * FROM files", function (err, data) {
     if (err) {
       return res.status(500).send("it's broken dude");
     }
 
-    res.render("index", {
+    res.render("home", {
       files: data
     });
   });
@@ -125,7 +128,7 @@ app.post("/login/:userpass", (req, res) => {
 //=========================checking if the userpass is valid===============================
 
 app.get("/login/:userpass", (req, res) => {
-  connection.query("SELECT userpass FROM users WHERE userpass = ?", [req.params.userpass], function (err, result) {
+  connection.query("SELECT userpass FROM users WHERE userpass = ?", [req.params.userpass], function (err, result){
     if (err) {
       throw err
     }
@@ -133,9 +136,7 @@ app.get("/login/:userpass", (req, res) => {
     if (result.length === 0) {
       return res.status(404).send("Use a valid username or password");
     }
-    res.render("login", {
-      users: result
-    })
+    res.render("login", {users: result})
   })
 });
 

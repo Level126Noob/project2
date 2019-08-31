@@ -12,11 +12,8 @@
             <h1>Options</h1>
             
             <div class="switch-field">
-                <a href="/"><radio id="radio-three" name="switch-two" value="yes" checked/>
-                <label for="radio-three">Home</label></a>
-                
-                <input type="radio" id="radio-five" name="switch-two" value="no" />
-                <label for="radio-five">Oldest</label>
+                <a href="/"id="radio-three" class="newest"><img src="../assets/imgs/up.svg"></a>
+                <a href="/descending" id="radio-five" class="oldest"><img src="../assets/imgs/down.svg"></a>
             </div>
 
             <div class="custom-select">
@@ -56,17 +53,17 @@
         <main>
             <div id="innerGrid">
                 {{#each files}}
-                        <div id="files" class="infoMenu">
-                            <button class="infoBtn" onclick="click">
-                                I
-                            </button>
+                        <div id="files" class="infoMenu" >
                             <h4>{{this.file_name}}.{{this.file_type}}</h4>
-                            <div id ="infoDrop" class="dropContent">
-                                <ul>
-                                    <li><h4>ID: {{this.id}}</h4></li>
-                                    <li><h4>Created: {{this.created_at}}</h4></li>
-                                    <li><button data-id="{{this.id}}" class="deletebutton">X</button></li>
-                                </ul>
+                            
+                            <div class="infoHover">
+                                <button class="infoBtn">I</button>
+                                <div class="infoContent" data-id="{{this.id}}">
+                                        {{!-- ID: {{this.id}} --}}
+                                        
+                                        <h4>Created: {{this.created_at}}</h4>
+                                        <button data-id="{{this.id}}" class="deletebutton"><img src="../assets/imgs/Component 1 – 1.svg" class="deleteX"></button>
+                                </div>
                             </div>
                         </div>
                 {{/each}}
