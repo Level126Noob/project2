@@ -61,7 +61,7 @@ footer {
 /* ! --- ! --- INNER FLEXBOX --- ! --- ! */
 #innerGrid {
     display: flex;
-    flex-flow: row wrap-reverse;
+    flex-flow: row wrap;
     align-content: flex-start; 
 }
 /* ! --- ! --- INNER FLEXBOX --- ! --- ! */

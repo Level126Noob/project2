@@ -1,3 +1,4 @@
+@import url("reset.css");
 @import url("grid-mediaQs.css");
 * {box-sizing: border-box;}
 
@@ -99,18 +100,16 @@ aside {
   display: flex;
 } */
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 img {
     width: 30px;
     height: auto;
 }
 
 .newest, .oldest {
-  transition: ease .5s;
+  transition: ease .5s .1s;
+  text-decoration: none;
+    color: inherit;
+
 }
 
 .newest {
@@ -157,7 +156,6 @@ img {
   height: 0;
   border: 6px solid transparent;
   border-color: rgb(0, 0, 0) transparent transparent transparent;
-  color: greenyellow;
 }
 
 .select-selected.select-arrow-active:after {
@@ -174,6 +172,11 @@ img {
   border-radius: 20px;
   padding: 10px;
   box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.75);
+  cursor: pointer;
+}
+
+.select-items > div {
+  margin: .75rem;
 }
 
 .select-hide {
@@ -181,8 +184,8 @@ img {
 }
 
 .select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-  margin: 10px;
+    background-color: #e7dfd0;
+    
 }
 
 /* ----- ----- Upload Button ----- ----- */
@@ -211,11 +214,24 @@ img {
 }
 
 .login {
-  text-decoration: none;
+  border: 2px #81ee87 solid;
+  border-radius: 20px;
+  border-top-left-radius: 5px;
+  display: flex;             
+    flex-direction: column;     
+    justify-content: center;    
+    align-items: center;  
+    text-decoration: none;
   color: inherit;
-  font-size: 1em;
-
 }
+
+
+h6 {
+  color: #81ee87;
+  font-size: 1.1em;
+  margin: .75rem;
+}
+
 /* == ASIDE == */
 
 
@@ -249,7 +265,7 @@ main {
   padding: 15px;
   border-radius: 20px;
   border-top-left-radius: 5px;
-  background-color: #00c7f48f;
+  background-color: #66f36dab;
   box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
 
@@ -338,15 +354,6 @@ footer > p {
     font-size: 1.2em;
 }
 
-.userSection {
-  margin-right: 20px;
-  float: right;
-}
-
-.login {
-  margin-left: 20px;
-  font-size: .75em;
-}
 /* == FOOTER == */
 
 
