@@ -4,8 +4,7 @@ USE scrapbook;
 
 CREATE TABLE users(
 id INTEGER(10) AUTO_INCREMENT NOT NULL,
-username varchar(100) NOT NULL,
-pass varchar(100) NULL,
+userpass varchar(100) NOT NULL,
 PRIMARY KEY (id)
 );
 
