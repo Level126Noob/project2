@@ -32,10 +32,84 @@ header {
     padding: 15px;
 }
 
-header > h1{
-    width: auto; 
-    font-size: 2em; 
+.logoHome {
+  width: 100%;
+  height: auto;
 }
+
+
+/* == == == LOGIN PAGE == == == */
+.loginPage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column; 
+}
+
+.logo {
+  width: 50%;
+  height: auto;
+}
+
+.wrap {
+  background-color: rgba(246, 156, 91, 0.747);
+  border-radius: 20px;
+  border-top-left-radius: 5px;
+  padding: 1rem;
+  margin-top: 3%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column; 
+}
+ 
+
+.wrap button {
+  font-size: 1.5  rem;
+  padding: .5rem;
+  cursor: pointer;
+  border: 2px rgb(65, 65, 65) solid;
+  border-radius: 5px 20px 20px 20px;  
+  margin: 1rem 0rem 0em .5rem;
+}
+
+#login {
+  background: #333;
+  color: #eee781;
+}
+  
+#register{
+  background: #333;
+  color: #81ee87;
+}
+
+.wrap input {
+  padding: .5rem;
+  margin: .5rem 0rem;
+  border: 2px rgb(65, 65, 65)  solid;
+  border-radius: 20px;
+}
+
+#username, #password {
+  background: #eee781;
+}
+
+#newUsername, #newPassword {
+  background: #81ee87;
+}
+
+.line {
+  width: 100%;
+  height: 1rem;
+  border-bottom: 2px #333 solid;
+  margin: 20px;
+}
+
+/* == == == LOGIN PAGE == == == */
+
 
 /* == NAV == */
 nav {
@@ -44,7 +118,7 @@ nav {
     padding: 10px;
     border-radius: 20px;
     /* border-top-left-radius: 5px; */
-    background-color:rgba(249, 193, 102, 0.753);
+    background-color: rgba(249,193, 102, 0.753);
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
     
 }
@@ -218,10 +292,10 @@ img {
   border-radius: 20px;
   border-top-left-radius: 5px;
   display: flex;             
-    flex-direction: column;     
-    justify-content: center;    
-    align-items: center;  
-    text-decoration: none;
+  flex-direction: column;     
+  justify-content: center;    
+  align-items: center;  
+  text-decoration: none;
   color: inherit;
 }
 
