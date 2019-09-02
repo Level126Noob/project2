@@ -2,9 +2,11 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 8000;
 const path = require("path")
+
 app.use(express.urlencoded({
   extended: true
 }));
+
 app.use(express.json());
 
 app.use(express.static("public"));
@@ -50,6 +52,14 @@ app.get("/home", (_, res) => {
     });
   });
 });
+
+
+//code for rendering the png image as a path==============================================================================
+app.get("/image.png", (req, res) => {
+  res.sendFile(path.join(__dirname, "./uploads/image.png"));
+});
+//========================================================================================================================
+
 
 //searchbar code==============================it's working now====================================================-.-.-.-//
 app.get("/search/:file_name", (req, res) => {

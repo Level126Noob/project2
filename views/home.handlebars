@@ -43,8 +43,13 @@
                 </select> --}}
 
                 <div class="uploadWrap">
-                    <button class="fileButton">Upload</button>
-                    <input class="filePath" type="file">
+                    <img src="" id="img-preview" />
+      <label class="file-upload-container" for="file-upload">
+        <input id="file-upload" class="cloudinary-fileupload" type="file" style="display:none;">
+        Select a File to Upload!
+      </label>
+    </div>
+    
                 </div>
             </form>
             
@@ -52,8 +57,10 @@
         </aside>
         <main>
             <div id="innerGrid">
-                {{#each files}}
+                <img src="https://res.cloudinary.com/dicqyt9co/image/upload/v1567382047/pflfgjsxgutoz20woqdh.png"/>  
+                              {{#each files}}
                         <div id="files" class="infoMenu" >
+                            
                             <h4>{{this.file_name}}.{{this.file_type}}</h4>
                             
                             <div class="infoHover">
@@ -63,6 +70,7 @@
                                         
                                         <h4>Created: {{this.created_at}}</h4>
                                         <button data-id="{{this.id}}" class="deletebutton"><img src="../assets/imgs/Component 1 – 1.svg" class="deleteX"></button>
+                                        
                                 </div>
                             </div>
                         </div>

@@ -1,3 +1,4 @@
+
 $(".deletebutton").on("click", function (event) {
     let id = $(this).data("id");
 
@@ -124,3 +125,41 @@ $("#login").click(function (event) {
     )
 })
 //=================================================================================
+
+//uploading an image to cloudinary stuff=================================================================
+
+const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/dicqyt9co/upload"
+var CLOUDINARY_UPLOAD_PRESET = "pmk9lcrs"
+var imgPreview = document.getElementById("img-preview");
+var fileUpload = document.getElementById("file-upload");
+
+fileUpload.addEventListener("change", function(event) {
+var file = event.target.files[0];
+var formData = new FormData();
+formData.append('file', file);
+formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET)
+axios({
+    url: CLOUDINARY_URL,
+    method: "POST",
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    data: formData
+}).then(function(res) {
+console.log(res);
+imgPreview.src = res.data.secure_url;
+alert("File Uploaded Successfully to Cloudinary")
+}).catch(function(err){
+    console.error(err);
+})
+})
+
+cloudinary.galleryWidget({
+    container: '#innerGrid',
+    cloudName: 'dicqyt9co',
+    mediaAssets: [{
+        tag: "PNG",
+        mediaType: "image"
+    }]
+}).render();
+//===================================================================
