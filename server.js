@@ -2,9 +2,11 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 8000;
 const path = require("path")
+
 app.use(express.urlencoded({
   extended: true
 }));
+
 app.use(express.json());
 
 app.use(express.static("public"));
@@ -35,18 +37,29 @@ connection.connect(function (err) {
   console.log("connected as id " + connection.threadId);
 });
 
-//renders index (home page)
 app.get("/", (_, res) => {
+  res.render("login")
+})
+//renders index (home page)
+app.get("/home", (_, res) => {
   connection.query("SELECT * FROM files", function (err, data) {
     if (err) {
       return res.status(500).send("it's broken dude");
     }
 
-    res.render("index", {
+    res.render("home", {
       files: data
     });
   });
 });
+
+
+//code for rendering the png image as a path==============================================================================
+app.get("/image.png", (req, res) => {
+  res.sendFile(path.join(__dirname, "./uploads/image.png"));
+});
+//========================================================================================================================
+
 
 //searchbar code==============================it's working now====================================================-.-.-.-//
 app.get("/search/:file_name", (req, res) => {
@@ -61,21 +74,6 @@ app.get("/search/:file_name", (req, res) => {
   })
 })
 //======================================================================================================-.-.-.-.**!!@
-
-//ascending page api route==================================================================================================
-app.get("/ascending", (req, res) => {
-  connection.query("SELECT * FROM files ORDER BY created_at ASC", [req.params.created_at], function (err, result) {
-    if (err) {
-      throw err;
-    }
-    console.log(result);
-    res.render("ascending", {
-      files: result
-    })
-  })
-})
-//=======================================================================================================================
-
 
 //descending page api route==================================================================================================
 app.get("/descending", (req, res) => {
@@ -117,6 +115,42 @@ app.delete("/api/files/:id", (req, res) => {
     res.status(200).end();
   });
 });
+
+//get request for login page to render on localhost8000:/login/=====================
+app.get("/login/", (_, res) => {
+  res.render("login")
+})
+//=====================================================================================
+
+//post request to put registering a new username and password into the userpass column==
+app.post("/login/:userpass", (req, res) => {
+  connection.query("INSERT INTO users (userpass) VALUE (?)", [req.params.userpass], function (err, result) {
+    if (err) {
+      throw err
+    }
+    res.json({
+      id: result.insertId
+    });
+  })
+});
+//=========================================================================================
+
+//=========================checking if the userpass is valid===============================
+
+app.get("/login/:userpass", (req, res) => {
+  connection.query("SELECT userpass FROM users WHERE userpass = ?", [req.params.userpass], function (err, result){
+    if (err) {
+      throw err
+    }
+    console.log(result);
+    if (result.length === 0) {
+      return res.status(404).send("Use a valid username or password");
+    }
+    res.render("login", {users: result})
+  })
+});
+
+//=========================================================================================
 
 
 app.listen(PORT, function () {

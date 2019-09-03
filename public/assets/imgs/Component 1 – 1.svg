@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73.548" height="103.896" viewBox="0 0 73.548 103.896">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="73.548" height="103.896" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Component_1_1" data-name="Component 1 – 1" clip-path="url(#clip-path)">
+    <g id="Rectangle_1" data-name="Rectangle 1" transform="matrix(0.875, 0.485, -0.485, 0.875, 53.202, 0)" fill="#f15144" stroke="#c14040" stroke-width="3">
+      <rect width="21.633" height="106.798" rx="10.817" stroke="none"/>
+      <rect x="1.5" y="1.5" width="18.633" height="103.798" rx="9.317" fill="none"/>
+    </g>
+    <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(0 11.747) rotate(-31)" fill="#f15144" stroke="rgba(193,64,64,0.68)" stroke-width="3">
+      <rect width="21.633" height="106.798" rx="10.817" stroke="none"/>
+      <rect x="1.5" y="1.5" width="18.633" height="103.798" rx="9.317" fill="none"/>
+    </g>
+  </g>
+</svg>

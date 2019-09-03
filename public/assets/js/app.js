@@ -1,3 +1,4 @@
+
 $(".deletebutton").on("click", function (event) {
     let id = $(this).data("id");
 
@@ -10,9 +11,6 @@ $(".deletebutton").on("click", function (event) {
         }
     );
 });
-
-const searchInput = document.querySelector('#searchInput')
-const grabSearch = console.log(searchInput.value)
 
 //searchbar input!===================================================/=/=/=/
 $('#searchButton').click(function (e) {
@@ -36,26 +34,12 @@ $('#searchButton').click(function (e) {
 //ascending button input!======================================================
 $('#radio-five').click(function (e) {
     e.preventDefault();
-    $.ajax("/ascending", {
-        type: "GET"
-    }).then(
-        (data) => {
-            // console.log(data)
-            location.replace("/ascending")
-        }
-    )
-});
-//=============================================================================
-
-//descending button input!======================================================
-$('#radio-three').click(function (e) {
-    e.preventDefault();
     $.ajax("/descending", {
         type: "GET"
     }).then(
         (data) => {
             // console.log(data)
-            location.reload("/descending")
+            location.replace("/descending")
         }
     )
 });
@@ -64,7 +48,7 @@ $('#radio-three').click(function (e) {
 //=================grabbing file upload path using jquery=======================
 (function ($, window, document, undefined) {
     $(function () {
-        $('.filepath').each(function () {
+        $('.filePath').each(function () {
             var $input = $(this),
                 $label = $input.next('label'),
                 labelVal = $label.html();
@@ -86,7 +70,7 @@ $('#radio-three').click(function (e) {
                     
                 console.log(fileName);
                 
-                $(".filebutton").click(function (event) {
+                $(".fileButton").click(function (event) {
                 var filetype = $('.select-filetype').val().trim();
                 // Send the POST request.
                 $.ajax("/" + fileName + filetype, {
@@ -106,3 +90,76 @@ $('#radio-three').click(function (e) {
 
 //jq ajax post request for inserting file_name into DB==========================
 //===============================================================================
+
+//post request for userpass on login page=========================================
+$("#register").click(function (event) {
+    event.preventDefault();
+    var username = $("#newUsername").val().trim();
+    var password = $("#newPassword").val().trim();
+    var userpass = username + password;
+    // Send the POST request.
+    $.ajax("/login/" + userpass, {
+        type: "POST",
+    }).then(
+        function (data) {
+            console.log(data);
+        }
+    );
+});
+//================================================================================
+
+//======================================checking if userpass if valid get request==
+$("#login").click(function (event) {
+    event.preventDefault();
+    var username = $("#username").val().trim();
+    var password = $("#password").val().trim();
+    var userpass = username + password;
+    $.ajax("/login/" + userpass, {
+        type: "GET",
+    }).then(
+        function(data) {
+            // console.log(data);
+
+            location.replace("/home")
+        }
+    )
+})
+//=================================================================================
+
+//uploading an image to cloudinary stuff=================================================================
+
+const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/dicqyt9co/upload"
+var CLOUDINARY_UPLOAD_PRESET = "pmk9lcrs"
+var imgPreview = document.getElementById("img-preview");
+var fileUpload = document.getElementById("file-upload");
+
+fileUpload.addEventListener("change", function(event) {
+var file = event.target.files[0];
+var formData = new FormData();
+formData.append('file', file);
+formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET)
+axios({
+    url: CLOUDINARY_URL,
+    method: "POST",
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    data: formData
+}).then(function(res) {
+console.log(res);
+imgPreview.src = res.data.secure_url;
+alert("File Uploaded Successfully to Cloudinary")
+}).catch(function(err){
+    console.error(err);
+})
+})
+
+cloudinary.galleryWidget({
+    container: '#innerGrid',
+    cloudName: 'dicqyt9co',
+    mediaAssets: [{
+        tag: "PNG",
+        mediaType: "image"
+    }]
+}).render();
+//===================================================================

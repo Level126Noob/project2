@@ -3,61 +3,71 @@
         <h1>ART Cloud</h1>
     </header>
         <nav>
-            <h1></h1>
-              
-            <input id="searchInput" type="text" placeholder="Find...">
-            <button id="searchButton">Search</button>
+             <form id="search" action="#">
+                <input type="text" id="searchInput" name="myInput" onkeypress="handle" placeholder="Find...">
+                <button id="searchButton">Search</button>
+            </form>
         </nav>
         <aside>
             <h1>Options</h1>
             
             <div class="switch-field">
-                <input type="radio" id="radio-three" name="switch-two" value="yes" checked/>
-                <label for="radio-three">Newest</label>
-                
-                <input type="radio" id="radio-five" name="switch-two" value="no" />
-                <label for="radio-five">Oldest</label>
+                <a href="/home"id="radio-three" class="newest"><img src="../assets/imgs/up.svg"></a>
+                <a href="/descending" id="radio-five" class="oldest"><img src="../assets/imgs/down.svg"></a>
             </div>
 
-            <div class="dropSelect">
-                <select class="select-css">
-                    <option>File Type</option>
-                    <option>.txt</option>
-                    <option>.png</option>
-                    <option>.pdf</option>
-                    <option>.fun</option>
+            <div class="custom-select">
+                <select class="custom-select">
+                    <option value="0">.txt</option>
+                    <option value="1">.mp4</option>
+                    <option value="2">.pdf</option>
+                    <option value="3">.mp3</option>
+                    <option value="4">.exe</option>
+                    <option value="5">.html</option>
+                    <option value="6">.css</option>
+                    <option value="7">.js</option>
                 </select>
             </div>
 
-            <input class="submitBtn" type="button" value="Apply" />
-
-            <form><input type="file" class="filepath">
-            <select class="select-filetype">
+            <form class="userSection custom-select">
+                <select class="select-filetype custom-select">
                     <option>File Type</option>
-                    <option>.txt</option>
-                    <option>.png</option>
-                    <option>.pdf</option>
-                    <option>.jpeg</option>
+                    <option value="0">.txt</option>
+                    <option value="1">.mp4</option>
+                    <option value="2">.pdf</option>
+                    <option value="3">.mp3</option>
+                    <option value="4">.exe</option>
+                    <option value="5">.html</option>
+                    <option value="6">.css</option>
+                    <option value="7">.js</option>
                 </select>
-            <button type="submit" class="filebutton">Sumbit File</button></form>
+
+                <div class="uploadWrap">
+                    <button class="fileButton">Upload</button>
+                    <input class="filePath" type="file">
+                </div>
+            </form>
             
+            <a class="login" href="#">Login</a>
         </aside>
         <main>
-            <h3>Main</h3>
-                <div id="innerGrid">
-                    {{#each files}}
-                <p>
-                    <div id="files">
-                        <h4>File ID: {{id}}</h4><br>
-                        <h4>File Name: {{file_name}}</h4><br>
-                        <h4>File Type: {{file_type}}</h4><br>
-                        <h4>File Created At: {{created_at}}</h4><br>
-                        <button data-id="{{this.id}}" class="deletebutton">Delete file!</button>
-                    </div>
-                </p>
-            {{/each}}
-                </div>
-            </section>
+            <div id="innerGrid">
+                {{#each files}}
+                        <div id="files" class="infoMenu" >
+                            <h4>{{this.file_name}}.{{this.file_type}}</h4>
+                            
+                            <div class="infoHover">
+                                <button class="infoBtn">I</button>
+                                <div class="infoContent" data-id="{{this.id}}">
+                                        {{!-- ID: {{this.id}} --}}
+                                        
+                                        <h4>Created: {{this.created_at}}</h4>
+                                        <button data-id="{{this.id}}" class="deletebutton"><img src="../assets/imgs/Component 1 – 1.svg" class="deleteX"></button>
+                                </div>
+                            </div>
+                        </div>
+                {{/each}}
+            </div>
         </main>
         <footer>
             <p>
