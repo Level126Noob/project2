@@ -18,4 +18,25 @@ PRIMARY KEY (id)
 );
 
 INSERT INTO files (id, file_type, file_name)
-VALUES (1, "png", "sample_data");
+VALUES (1, "txt", "sample_data");
+
+INSERT INTO files (id, file_type, file_name)
+VALUES (2, "txt", "data");
+
+INSERT INTO files (id, file_type, file_name)
+VALUES (3, "txt", "stuff");
+
+INSERT INTO files (id, file_type, file_name)
+VALUES (4, "txt", "morestuff");
+
+INSERT INTO files (id, file_type, file_name)
+VALUES (5, "txt", "all_the_stuff");
+
+INSERT INTO files (id, file_type, file_name)
+VALUES (6, "txt", "omg_stuff");
+
+INSERT INTO files (id, file_type, file_name)
+VALUES (7, "txt", "stuff_for_days");
+
+INSERT INTO files (id, file_type, file_name)
+VALUES (8, "txt", "why_not_more_stuff");
