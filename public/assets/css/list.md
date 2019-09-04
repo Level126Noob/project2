@@ -1,9 +1,12 @@
 # search button
-    sizing
+    sizing 
+XXXXXXXXXXXXXXXXX
 
 ## up down arrows
     clean up color
     sizing and spacing
+XXXXXXXXXXXXXXXXXXXXXX
+
 
 ### logo 
     darken cloud lines 

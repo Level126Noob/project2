@@ -6,19 +6,19 @@
 body {
     background-image: linear-gradient(45deg, 
     rgb(249, 193, 102) 0%,
-     rgb(249, 193, 102) 4%,
-     rgb(248, 174, 96) 4%, 
-     rgb(248, 174, 96) 38%,
-     rgb(246, 156, 91) 38%, 
-     rgb(246, 156, 91) 41%,
-     rgb(245, 137, 85) 20%, 
-     rgb(245, 137, 85) 44%,
-     rgb(244, 118, 79) 44%, 
-     rgb(244, 118, 79) 71%,
-     rgb(242, 100, 74) 71%, 
-     rgb(242, 100, 74) 74%,
-     rgb(241, 81, 68) 74%, 
-     rgb(241, 81, 68) 100%);
+    rgb(249, 193, 102) 4%,
+    rgb(248, 174, 96) 4%, 
+    rgb(248, 174, 96) 38%,
+    rgb(246, 156, 91) 38%, 
+    rgb(246, 156, 91) 41%,
+    rgb(245, 137, 85) 20%, 
+    rgb(245, 137, 85) 44%,
+    rgb(244, 118, 79) 44%, 
+    rgb(244, 118, 79) 71%,
+    rgb(242, 100, 74) 71%, 
+    rgb(242, 100, 74) 74%,
+    rgb(241, 81, 68) 74%, 
+    rgb(241, 81, 68) 100%);
     background-attachment: fixed;
     font-family: 'Josefin Sans', sans-serif;
     color: #312b2b;
@@ -64,14 +64,14 @@ header {
 }
  
 
-/* .wrap button {
+.wrap > button {
   font-size: 1.5  rem;
   padding: .5rem;
   cursor: pointer;
   border: 2px rgb(65, 65, 65) solid;
   border-radius: 5px 20px 20px 20px;  
   margin: 1rem 0rem 0em .5rem;
-} */
+}
 
 #login {
   background: #333;
@@ -171,99 +171,31 @@ aside {
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
 
-
-/* ----- ----- Switch State ----- ----- */
-/* .switch-field {
-  display: flex;
-} */
-
-img {
-    width: 30px;
+a > img {
+    width: 50%;
+    max-width: 35px;
     height: auto;
+    transition: ease .5s .1s;
+    float: right;
+}
+
+h1 {
+  font-size: 1.1rem;
 }
 
 .newest, .oldest {
-  transition: ease .5s .1s;
   text-decoration: none;
-    color: inherit;
-
+  color: inherit;
 }
 
-.newest {
-  float: left;
-  margin-left: .75rem;
+.newest img:hover {
+  transform: translateY(-15px)
 }
 
-.newest:hover {
-  transform: translateY(-10px)
+.oldest img:hover {
+  transform: translateY(15px)
 }
 
-.oldest {
-  float: right;
-  margin-right: .75rem;
-}
-
-.oldest:hover {
-  transform: translateY(10px)
-}
-
-/* ----- ----- Select ----- ----- */
-
-.custom-select {
-  position: relative;
-}
-
-.custom-select select {
-  display: none;
-}
-
-.select-selected {
-  background-color: #e9dac0;
-  border-radius: 20px;
-  padding: 10px;
-  
-}
-
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: rgb(0, 0, 0) transparent transparent transparent;
-}
-
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent rgb(0, 0, 0) transparent;
-  top: 7px;
-}
-
-.select-items {
-  position: absolute;
-  background-color: #e9dac0;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  border-radius: 20px;
-  padding: 10px;
-  box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.75);
-  cursor: pointer;
-}
-
-.select-items > div {
-  margin: .75rem;
-}
-
-.select-hide {
-  display: none;
-}
-
-.select-items div:hover, .same-as-selected {
-    background-color: #e7dfd0;
-    
-}
 
 /* ----- ----- Upload Button ----- ----- */
 .uploadWrap {
@@ -299,12 +231,16 @@ img {
   float: right;
 }
 
-
+#img-preview {
+  width: 100%;
+  height: auto;
+}
+/* 
 h6 {
   color: #333;
   font-size: 1.3em;
   margin: .75rem;
-}
+} */
 
 /* == ASIDE == */
 

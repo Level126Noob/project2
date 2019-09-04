@@ -5,21 +5,9 @@
     </clipPath>
   </defs>
   <g id="down" clip-path="url(#clip-path)">
-    <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(0 11.142) rotate(-31)" fill="#333" stroke="rgba(193,64,64,0.68)" stroke-width="3">
-      <rect width="21.633" height="106.798" rx="10.817" stroke="none"/>
-      <rect x="1.5" y="1.5" width="18.633" height="103.798" rx="9.317" fill="none"/>
-    </g>
-    <g id="Rectangle_6" data-name="Rectangle 6" transform="translate(0 11.142) rotate(-31)" fill="#333" stroke="rgba(193,64,64,0.68)" stroke-width="5">
-      <rect width="21.633" height="106.798" rx="10.817" stroke="none"/>
-      <rect x="2.5" y="2.5" width="16.633" height="101.798" rx="8.317" fill="none"/>
-    </g>
-    <g id="Rectangle_4" data-name="Rectangle 4" transform="translate(62.543 102.686) rotate(-149)" fill="#373636" stroke="rgba(193,64,64,0.68)" stroke-width="3">
-      <rect width="21.633" height="106.798" rx="10.817" stroke="none"/>
-      <rect x="1.5" y="1.5" width="18.633" height="103.798" rx="9.317" fill="none"/>
-    </g>
-    <g id="Rectangle_5" data-name="Rectangle 5" transform="translate(62.543 102.686) rotate(-149)" fill="#373636" stroke="rgba(193,64,64,0.68)" stroke-width="5">
-      <rect width="21.633" height="106.798" rx="10.817" stroke="none"/>
-      <rect x="2.5" y="2.5" width="16.633" height="101.798" rx="8.317" fill="none"/>
-    </g>
+    <rect id="Rectangle_3" data-name="Rectangle 3" width="21.633" height="106.798" rx="10.817" transform="translate(0 11.142) rotate(-31)" fill="#333"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="21.633" height="106.798" rx="10.817" transform="translate(0 11.142) rotate(-31)" fill="#333"/>
+    <rect id="Rectangle_4" data-name="Rectangle 4" width="21.633" height="106.798" rx="10.817" transform="translate(62.543 102.686) rotate(-149)" fill="#373636"/>
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="21.633" height="106.798" rx="10.817" transform="translate(62.543 102.686) rotate(-149)" fill="#373636"/>
   </g>
 </svg>

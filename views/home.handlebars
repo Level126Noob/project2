@@ -2,72 +2,52 @@
     <header>
         <img class="logoHome" src="../assets/imgs/Component 2 – 1.svg">
     </header>
-        <nav>
-             <form id="search" action="#">
-                <input type="text" id="searchInput" name="myInput" onkeypress="handle" placeholder="Find...">
-                <button id="searchButton">Search</button>
-            </form>
-        </nav>
-        <aside>
-            <h1>Options</h1>
-            
-            <div class="switch-field">
-                <a href="/home"id="radio-three" class="newest"><img src="../assets/imgs/up.svg"></a>
-                <a href="/descending" id="radio-five" class="oldest"><img src="../assets/imgs/down.svg"></a>
-            </div>
-{{!-- 
-            <div class="custom-select">
-                <select class="custom-select">
-                    <option value="0">.txt</option>
-                    <option value="1">.mp4</option>
-                    <option value="2">.pdf</option>
-                    <option value="3">.mp3</option>
-                    <option value="4">.exe</option>
-                    <option value="5">.html</option>
-                    <option value="6">.css</option>
-                    <option value="7">.js</option>
-                </select>
-            </div> --}}
-                <div class="uploadWrap">
-                    <img src="" id="img-preview" />
-      <label class="file-upload-container" for="file-upload">
-        <input id="file-upload" class="cloudinary-fileupload" type="file" style="display:none;">
-        Select a File to Upload!
-      </label>
-    </div>
-    
-                </div>
-            </form>
-            
-            
-        </aside>
-        <main>
-            <div id="innerGrid">  
-                              {{#each files}}
-                        <div id="files" class="infoMenu" >
-                            
-                            <h4>{{this.file_name}}.{{this.file_type}}</h4>
-                            
-                            <div class="infoHover">
-                                <button class="infoBtn">I</button>
-                                <div class="infoContent" data-id="{{this.id}}">
-                                        
-                                        <h4>Created: {{this.created_at}}</h4>
-                                        <button data-id="{{this.id}}" class="deletebutton"><img src="../assets/imgs/Component 1 – 1.svg" class="deleteX"></button>
-                                        
-                                </div>
-                            </div>
+    <nav>
+        <form id="search" action="#">
+            <input type="text" id="searchInput" name="myInput" onkeypress="handle" placeholder="Find...">
+            <button id="searchButton">Search</button>
+        </form>
+    </nav>
+    <aside>
+        <div class="newSec">
+            <h1>Newest</h1>
+            <a href="/home"id="radio-three" class="newest"><img src="../assets/imgs/up.svg"></a>
+        </div>
+        <div class="oldSec">
+            <h1>Oldest</h1>
+            <a href="/descending" id="radio-five" class="oldest"><img src="../assets/imgs/down.svg"></a>
+        </div>
+        <div class="uploadWrap">
+            <img src="" id="img-preview" />
+            <label class="file-upload-container" for="file-upload">
+                <input id="file-upload" class="cloudinary-fileupload" type="file" style="display:none;">
+                Select a File to Upload!
+            </label>
+        </div>
+    </aside>
+    <main>
+        <div id="innerGrid">  
+            {{#each files}}
+                <div id="files" class="infoMenu" >     
+                    <h4>{{this.file_name}}.{{this.file_type}}</h4>
+                    <div class="infoHover">
+                        <button class="infoBtn">I</button>
+                        <div class="infoContent" data-id="{{this.id}}">
+                            <h4>Created: {{this.created_at}}</h4>
+                            <button data-id="{{this.id}}" class="deletebutton">
+                                <img src="../assets/imgs/Component 1 – 1.svg" class="deleteX">   
+                            </button>
                         </div>
-                {{/each}}
-            </div>
-        </main>
-        <section id="imgSection">
-            
-        </section>
-        <footer>
-            <p>
-               Made by: Travis Abraham, Ryan Wiggins and Alex Barbati
-            </p>
-            <a class="login" href="#"><h6>Logout</h6></a>
-        </footer>
-    </article>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </main>
+    <section id="imgSection"></section>    
+    <footer>
+        <p>
+            Made by: Travis Abraham, Ryan Wiggins and Alex Barbati
+        </p>
+        <a class="login" href="#"><h6>Logout</h6></a>
+    </footer>
+</article>

@@ -39,6 +39,7 @@ aside {
     display: grid;
     flex-flow: column;
     grid-gap: 20px;
+    grid-template-rows: 20% 20% 60%;
 }
 
 main {
@@ -80,6 +81,10 @@ footer {
     article > * {
         width: 100%;
         height: 100%;
+    }
+
+    a > img {
+        margin-left: 5rem !important;
     }
 }
 /* ! --- ! --- MEDIA QUERIES --- ! --- ! */
