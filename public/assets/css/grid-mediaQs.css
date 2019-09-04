@@ -1,6 +1,6 @@
 
 html {  
-    height: 100%;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -11,21 +11,16 @@ html {
 body {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center; 
 }
 
 /* ! --- ! --- GRID --- ! --- ! */
 article {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 15px;
     grid-template-columns: 20% 80%;
     grid-template-rows: 15% 75% 10%;
-    width: 90%;
-    height: 90%;
-    margin: 10px;
+    width: 98%;
+    height: 95%;
 }
 
 header {

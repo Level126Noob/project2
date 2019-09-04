@@ -29,11 +29,14 @@ header {
     background-color:rgba(241, 82, 68, 0.75);
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
     width: 100%;
-    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column; 
 }
 
 .logoHome {
-  width: 100%;
+  width: 75%;
   height: auto;
 }
 
@@ -54,16 +57,9 @@ header {
 }
 
 .wrap {
-  background-color: rgba(246, 156, 91, 0.747);
   border-radius: 20px;
   border-top-left-radius: 5px;
   padding: 1rem;
-  margin-top: 3%;
-  width: 35%;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  flex-direction: column; 
 }
  
 
@@ -149,7 +145,6 @@ nav > h1 {
     border-radius: 1em;
     float: right;
     padding: .5rem;
-    height: 3rem;
     background-color: #e9dac0;
 }
 
@@ -288,7 +283,8 @@ img {
 }
 
 .login {
-  border: 2px #81ee87 solid;
+  border: 3px  #e9dac0 solid;
+  background-color: #81ee87;
   border-radius: 20px;
   border-top-left-radius: 5px;
   display: flex;             
@@ -301,8 +297,8 @@ img {
 
 
 h6 {
-  color: #81ee87;
-  font-size: 1.1em;
+  color: #333;
+  font-size: 1.3em;
   margin: .75rem;
 }
 
@@ -339,7 +335,7 @@ main {
   padding: 15px;
   border-radius: 20px;
   border-top-left-radius: 5px;
-  background-color: #66f36dab;
+  background-color: #81ee87;
   box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
 }
 
