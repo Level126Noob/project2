@@ -1,5 +1,6 @@
 @import url("reset.css");
 @import url("grid-mediaQs.css");
+@import url("img-widget.css");
 * {box-sizing: border-box;}
 
 body {
@@ -287,12 +288,8 @@ img {
   background-color: #81ee87;
   border-radius: 20px;
   border-top-left-radius: 5px;
-  display: flex;             
-  flex-direction: column;     
-  justify-content: center;    
-  align-items: center;  
-  text-decoration: none;
   color: inherit;
+  float: right;
 }
 
 

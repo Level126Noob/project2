@@ -1,0 +1,14 @@
+#imgSection {
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgba(249, 193, 102, 0.11);
+    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+}
+
+#imgSection img {
+    border-radius: 20px;
+}
+
+.css-19y6w4c {
+    display: none !important;
+}
