@@ -144,7 +144,7 @@ app.get("/login/:userpass", (req, res) => {
     }
     console.log(result);
     if (result.length === 0) {
-      return res.status(404).send("Use a valid username or password");
+      return res.status(401).send("Use a valid username or password");
     }
     res.render("login", {users: result})
   })
