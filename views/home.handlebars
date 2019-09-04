@@ -28,20 +28,6 @@
                     <option value="7">.js</option>
                 </select>
             </div>
-
-            {{!-- <form class="userSection custom-select">
-                <select class="select-filetype custom-select">
-                    <option>File Type</option>
-                    <option value="0">.txt</option>
-                    <option value="1">.mp4</option>
-                    <option value="2">.pdf</option>
-                    <option value="3">.mp3</option>
-                    <option value="4">.exe</option>
-                    <option value="5">.html</option>
-                    <option value="6">.css</option>
-                    <option value="7">.js</option>
-                </select> --}}
-
                 <div class="uploadWrap">
                     <img src="" id="img-preview" />
       <label class="file-upload-container" for="file-upload">
@@ -65,7 +51,6 @@
                             <div class="infoHover">
                                 <button class="infoBtn">I</button>
                                 <div class="infoContent" data-id="{{this.id}}">
-                                        {{!-- ID: {{this.id}} --}}
                                         
                                         <h4>Created: {{this.created_at}}</h4>
                                         <button data-id="{{this.id}}" class="deletebutton"><img src="../assets/imgs/Component 1 – 1.svg" class="deleteX"></button>
@@ -76,6 +61,9 @@
                 {{/each}}
             </div>
         </main>
+        <section id="imgSection">
+            
+        </section>
         <footer>
             <p>
                Made by: Travis Abraham, Ryan Wiggins and Alex Barbati

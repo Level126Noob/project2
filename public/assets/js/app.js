@@ -155,7 +155,7 @@ alert("File Uploaded Successfully to Cloudinary")
 })
 
 cloudinary.galleryWidget({
-    container: '#innerGrid',
+    container: '#imgSection',
     cloudName: 'dicqyt9co',
     mediaAssets: [{
         tag: "PNG",
