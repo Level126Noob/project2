@@ -45,47 +45,47 @@ $('#radio-five').click(function (e) {
 });
 //=============================================================================
 
-//=================grabbing file upload path using jquery=======================
-(function ($, window, document, undefined) {
-    $(function () {
-        $('.filePath').each(function () {
-            var $input = $(this),
-                $label = $input.next('label'),
-                labelVal = $label.html();
+//=================grabbing file upload path using jquery (used cloudinary below)=======================
+// (function ($, window, document, undefined) {
+//     $(function () {
+//         $('.filePath').each(function () {
+//             var $input = $(this),
+//                 $label = $input.next('label'),
+//                 labelVal = $label.html();
 
             
 
-            $input.on('change', function (e) {
-                var fileName = '';
+//             $input.on('change', function (e) {
+//                 var fileName = '';
 
-                if (this.files && this.files.length > 1)
-                    fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
-                else if (e.target.value)
-                    fileName = e.target.value.split('\\').pop();
+//                 if (this.files && this.files.length > 1)
+//                     fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+//                 else if (e.target.value)
+//                     fileName = e.target.value.split('\\').pop();
 
-                if (fileName)
-                    $label.find('span').html(fileName);
-                else
-                    $label.html(labelVal);
+//                 if (fileName)
+//                     $label.find('span').html(fileName);
+//                 else
+//                     $label.html(labelVal);
                     
-                console.log(fileName);
+//                 console.log(fileName);
                 
-                $(".fileButton").click(function (event) {
-                var filetype = $('.select-filetype').val().trim();
-                // Send the POST request.
-                $.ajax("/" + fileName + filetype, {
-                    type: "POST",
-                }).then(
-                    function (data) {
-                        console.log(data);
-                    }
-                );
-            });
-            });
+//                 $(".fileButton").click(function (event) {
+//                 var filetype = $('.select-filetype').val().trim();
+//                 // Send the POST request.
+//                 $.ajax("/" + fileName + filetype, {
+//                     type: "POST",
+//                 }).then(
+//                     function (data) {
+//                         console.log(data);
+//                     }
+//                 );
+//             });
+//             });
 
-        });
-    });
-})(jQuery, window, document);
+//         });
+//     });
+// })(jQuery, window, document);
 //===============================================================================
 
 //jq ajax post request for inserting file_name into DB==========================
@@ -160,6 +160,9 @@ cloudinary.galleryWidget({
     mediaAssets: [{
         tag: "PNG",
         mediaType: "image"
+    }, {
+        tag: "PNG",
+        mediaType: "video"
     }]
 }).render();
 //===================================================================
