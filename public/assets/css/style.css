@@ -104,6 +104,13 @@ header {
   margin: 20px;
 }
 
+#loginDiv * {
+  border-radius: 15px;
+  border-style: none;
+  padding: .5rem;
+  margin: .5rem;
+}
+
 /* == == == LOGIN PAGE == == == */
 
 
@@ -289,7 +296,6 @@ main {
 
 .infoContent {
   position: absolute;
-  background-color: #312b2b;
   color: #333333be;
   width: 100px;
   box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
@@ -300,7 +306,7 @@ main {
 }
 
 .infoContent h4 {
-  color: #e9dac0;
+  color: #333333be;
   padding: 10px;
 }
 
@@ -375,10 +381,4 @@ footer > p {
 
 
 /* == LOGIN == */
-#loginDiv * {
-  border-radius: 15px;
-  border-style: none;
-  padding: .5rem;
-  margin: .5rem;
-}
 
