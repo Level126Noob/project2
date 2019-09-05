@@ -55,6 +55,9 @@ main {
 footer {
     grid-column: 1 / 4;
     grid-row: 3;
+    display: grid;
+    flex-flow: column;
+    grid-template-columns: 80% 10%;
 }
 
 /* ! --- ! --- GRID --- ! --- ! */
@@ -85,6 +88,10 @@ footer {
 
     a > img {
         margin-left: 5rem !important;
+    }
+    
+    #img-preview {
+        max-width: 140px;
     }
 }
 /* ! --- ! --- MEDIA QUERIES --- ! --- ! */

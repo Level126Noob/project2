@@ -30,10 +30,9 @@ header {
     background-color:rgba(241, 82, 68, 0.75);
     box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
     width: 100%;
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-items: center;
-    flex-direction: column; 
+    justify-items: center; 
 }
 
 .logoHome {
@@ -198,49 +197,29 @@ h1 {
 
 
 /* ----- ----- Upload Button ----- ----- */
-.uploadWrap {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
+ .uploadWrap { 
+  display: grid;
+  flex-flow: column;
+  grid-gap: 5px;
+  height: 90%;
 }
 
-.fileButton {
+.file-upload-container {
   border-radius: 20px;
-  border: none;
+  height: 2em;
+  border: none; 
   background-color: #e9dac0;
   padding: 10px;
-}
-
-.uploadWrap input[type=file] {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-}
-
-.uploadWrap input:hover {
   cursor: pointer;
+  max-width: 75px;
 }
 
-.login {
-  border: 3px  #e9dac0 solid;
-  background-color: #81ee87;
-  border-radius: 20px;
-  border-top-left-radius: 5px;
-  color: inherit;
-  float: right;
-}
 
 #img-preview {
   width: 100%;
   height: auto;
+  border-radius: 15px;
 }
-/* 
-h6 {
-  color: #333;
-  font-size: 1.3em;
-  margin: .75rem;
-} */
 
 /* == ASIDE == */
 
@@ -335,16 +314,21 @@ main {
   color: red;
   cursor: pointer;
 }
-/* #innerGrid > img {
-    height: 30%;
-    width: auto;
-    margin: 20px;
-    border-radius: 20px;
-    border-top-left-radius: 5px;
-    box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
-} */
 
+#imgSection {
+  padding: 15px;
+  border-radius: 20px;
+  background-color: rgba(249, 193, 102, 0.11);
+  box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.75);
+}
 
+#imgSection img {
+  border-radius: 20px;
+}
+
+.css-19y6w4c {
+  display: none !important;
+}
 
 /* == MAIN == */
 
@@ -360,10 +344,19 @@ footer {
 }
 
 footer > p {
-    
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
+.login {
+  border-radius: 20px;
+  height: 2em;
+  border: none; 
+  background-color: #e9dac0;
+  padding: 10px;
+  color: inherit;
+  text-decoration: none;
+  width: 75px;
+}
 /* == FOOTER == */
 
 
