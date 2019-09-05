@@ -326,7 +326,21 @@ main {
   border-radius: 20px;
 }
 
-.css-19y6w4c {
+/* .css-19y6w4c {
+  display: none !important;
+} */
+
+
+.css-11g9jpr {
+  width: 85% !important;
+  height: 85% !important;  
+  border-radius: 20px !important;
+}
+
+.css-wk8ef1 {
+  display: none !important;
+}
+.css-if54kn {
   display: none !important;
 }
 
@@ -360,5 +374,11 @@ footer > p {
 /* == FOOTER == */
 
 
-
+/* == LOGIN == */
+#loginDiv * {
+  border-radius: 15px;
+  border-style: none;
+  padding: .5rem;
+  margin: .5rem;
+}
 
