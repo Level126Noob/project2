@@ -102,10 +102,15 @@ $("#register").click(function (event) {
         type: "POST",
     }).then(
         function (data) {
-            console.log(data);
+            clearFields();
         }
     );
 });
+
+const clearFields = () => {
+    document.getElementById('newUsername').value = ''
+    document.getElementById('newPassword').value = ''
+   }
 //================================================================================
 
 //======================================checking if userpass if valid get request==
