@@ -4,8 +4,11 @@
       <rect width="117.548" height="102.686" fill="none"/>
     </clipPath>
   </defs>
-  <g id="up" clip-path="url(#clip-path)">
+  <g id="Component_4_1" data-name="Component 4 – 1" clip-path="url(#clip-path)">
     <rect id="Rectangle_3" data-name="Rectangle 3" width="21.633" height="106.798" rx="10.817" transform="translate(55.005 0) rotate(31)" fill="#333"/>
-    <path id="Path_2" data-name="Path 2" d="M10.817,0A10.817,10.817,0,0,1,21.633,10.817V95.981A10.817,10.817,0,0,1,0,95.981V10.817A10.817,10.817,0,0,1,10.817,0Z" transform="translate(117.548 91.544) rotate(149)" fill="#373636"/>
+    <g id="Rectangle_4" data-name="Rectangle 4" transform="translate(117.548 91.544) rotate(149)" fill="#373636" stroke="#81ee87" stroke-width="5">
+      <rect width="21.633" height="106.798" rx="10.817" stroke="none"/>
+      <rect x="2.5" y="2.5" width="16.633" height="101.798" rx="8.317" fill="none"/>
+    </g>
   </g>
 </svg>
