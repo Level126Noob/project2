@@ -29,4 +29,4 @@ Link - https://project2scrapbook.herokuapp.com/
   
 ### Screenshots
 
-    - 
+![alt text](https://github.com/Level126Noob/project2/blob/master/public/assets/imgs/Art-Cloud.png "Screenshot")
