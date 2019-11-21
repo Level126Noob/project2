@@ -2,13 +2,31 @@
 
 Link https://project2scrapbook.herokuapp.com/
 
-## Summary
-  - Art Cloud is a storage website where you login and upload custom files and images. Then you are able to view search and sort your files and images all in one place
+### Summary
+
+    - Art Cloud is a storage website where you login and upload custom files and images. 
+    - Then you are able to view search and sort your files and images all in one place
   
- ## Troubles
- - Gettting the files to show up in MySQL database was very difficult.
- - Styling the Cloudinary Image viewer was a pre built component.
+### Outline
+    
+    - Search
+    
+    - Sidebar
+      - Search Modifiers
+      
+    - Main file viewing area
+    
+    - Image viewer
+      
  
- ## Tech Used
-  - MySQL, HTML, JavaScript, CSS, Cloudinary API, and HandleBars.
+### Instructions
+
+    - Register and login 
+    
+    - Upload files or images
+    
+    - Search and browse your files all in one place
   
+### Screenshots
+
+    - 
